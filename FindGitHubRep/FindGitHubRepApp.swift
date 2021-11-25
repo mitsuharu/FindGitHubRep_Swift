@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct FindGitHubRepApp: App {
+  
+  let store = initializeRedux()
+  
     var body: some Scene {
         WindowGroup {
-            ContentView()
+          ContentView().source(with: store)
         }
     }
 }
