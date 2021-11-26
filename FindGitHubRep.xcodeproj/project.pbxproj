@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		96728840274DF79000454CC0 /* FindGitHubRepApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9672883F274DF79000454CC0 /* FindGitHubRepApp.swift */; };
-		96728842274DF79000454CC0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96728841274DF79000454CC0 /* ContentView.swift */; };
 		96728844274DF79200454CC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96728843274DF79200454CC0 /* Assets.xcassets */; };
 		96728847274DF79200454CC0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96728846274DF79200454CC0 /* Preview Assets.xcassets */; };
 		96728851274DF79300454CC0 /* FindGitHubRepTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96728850274DF79300454CC0 /* FindGitHubRepTests.swift */; };
@@ -17,12 +16,16 @@
 		9672886B274DF8A300454CC0 /* ReMVVMCore in Frameworks */ = {isa = PBXBuildFile; productRef = 9672886A274DF8A300454CC0 /* ReMVVMCore */; };
 		9672886D274DF8A300454CC0 /* ReMVVMSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9672886C274DF8A300454CC0 /* ReMVVMSwiftUI */; };
 		96728870274DF90D00454CC0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9672886F274DF90D00454CC0 /* Alamofire */; };
-		968F9D1E274F595E0065F9D1 /* RootState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D1D274F595E0065F9D1 /* RootState.swift */; };
-		968F9D22274F59BB0065F9D1 /* actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D21274F59BB0065F9D1 /* actions.swift */; };
-		968F9D24274F59D50065F9D1 /* reducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D23274F59D50065F9D1 /* reducers.swift */; };
-		968F9D26274F59E50065F9D1 /* state.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D25274F59E50065F9D1 /* state.swift */; };
-		968F9D29274F5B660065F9D1 /* RootReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D28274F5B660065F9D1 /* RootReducer.swift */; };
-		968F9D2B274F62CD0065F9D1 /* InitializeRedux.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D2A274F62CD0065F9D1 /* InitializeRedux.swift */; };
+		968F9D3D275074CD0065F9D1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968F9D30275074CD0065F9D1 /* Preview Assets.xcassets */; };
+		968F9D4D275076200065F9D1 /* CounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D4C275076200065F9D1 /* CounterViewModel.swift */; };
+		968F9D4F275076C40065F9D1 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D4E275076C40065F9D1 /* CounterView.swift */; };
+		968F9D6C2750831C0065F9D1 /* InitializeRedux.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D642750831C0065F9D1 /* InitializeRedux.swift */; };
+		968F9D6D2750831C0065F9D1 /* RootState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D652750831C0065F9D1 /* RootState.swift */; };
+		968F9D6E2750831C0065F9D1 /* RootReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D662750831C0065F9D1 /* RootReducer.swift */; };
+		968F9D6F2750831C0065F9D1 /* state.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D692750831C0065F9D1 /* state.swift */; };
+		968F9D702750831C0065F9D1 /* reducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D6A2750831C0065F9D1 /* reducers.swift */; };
+		968F9D712750831C0065F9D1 /* actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D6B2750831C0065F9D1 /* actions.swift */; };
+		968F9D74275083400065F9D1 /* selectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D73275083400065F9D1 /* selectors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +48,6 @@
 /* Begin PBXFileReference section */
 		9672883C274DF79000454CC0 /* FindGitHubRep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindGitHubRep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9672883F274DF79000454CC0 /* FindGitHubRepApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindGitHubRepApp.swift; sourceTree = "<group>"; };
-		96728841274DF79000454CC0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		96728843274DF79200454CC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96728846274DF79200454CC0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9672884C274DF79300454CC0 /* FindGitHubRepTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindGitHubRepTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,12 +55,16 @@
 		96728856274DF79300454CC0 /* FindGitHubRepUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindGitHubRepUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9672885A274DF79300454CC0 /* FindGitHubRepUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindGitHubRepUITests.swift; sourceTree = "<group>"; };
 		9672885C274DF79300454CC0 /* FindGitHubRepUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindGitHubRepUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		968F9D1D274F595E0065F9D1 /* RootState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootState.swift; sourceTree = "<group>"; };
-		968F9D21274F59BB0065F9D1 /* actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = actions.swift; sourceTree = "<group>"; };
-		968F9D23274F59D50065F9D1 /* reducers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reducers.swift; sourceTree = "<group>"; };
-		968F9D25274F59E50065F9D1 /* state.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = state.swift; sourceTree = "<group>"; };
-		968F9D28274F5B660065F9D1 /* RootReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootReducer.swift; sourceTree = "<group>"; };
-		968F9D2A274F62CD0065F9D1 /* InitializeRedux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializeRedux.swift; sourceTree = "<group>"; };
+		968F9D30275074CD0065F9D1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		968F9D4C275076200065F9D1 /* CounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewModel.swift; sourceTree = "<group>"; };
+		968F9D4E275076C40065F9D1 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		968F9D642750831C0065F9D1 /* InitializeRedux.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitializeRedux.swift; sourceTree = "<group>"; };
+		968F9D652750831C0065F9D1 /* RootState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootState.swift; sourceTree = "<group>"; };
+		968F9D662750831C0065F9D1 /* RootReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootReducer.swift; sourceTree = "<group>"; };
+		968F9D692750831C0065F9D1 /* state.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = state.swift; sourceTree = "<group>"; };
+		968F9D6A2750831C0065F9D1 /* reducers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = reducers.swift; sourceTree = "<group>"; };
+		968F9D6B2750831C0065F9D1 /* actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = actions.swift; sourceTree = "<group>"; };
+		968F9D73275083400065F9D1 /* selectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +118,15 @@
 		9672883E274DF79000454CC0 /* FindGitHubRep */ = {
 			isa = PBXGroup;
 			children = (
-				968F9D1C274F58F80065F9D1 /* redux */,
+				968F9D632750831C0065F9D1 /* Redux */,
+				968F9D2D275074CD0065F9D1 /* API */,
+				968F9D2C275074CD0065F9D1 /* Controller */,
+				968F9D2E275074CD0065F9D1 /* Model */,
+				968F9D2F275074CD0065F9D1 /* Preview Content */,
+				968F9D31275074CD0065F9D1 /* Utils */,
+				968F9D32275074CD0065F9D1 /* View */,
+				968F9D33275074CD0065F9D1 /* ViewModel */,
 				9672883F274DF79000454CC0 /* FindGitHubRepApp.swift */,
-				96728841274DF79000454CC0 /* ContentView.swift */,
 				96728843274DF79200454CC0 /* Assets.xcassets */,
 				96728845274DF79200454CC0 /* Preview Content */,
 			);
@@ -146,33 +158,86 @@
 			path = FindGitHubRepUITests;
 			sourceTree = "<group>";
 		};
-		968F9D1C274F58F80065F9D1 /* redux */ = {
+		968F9D2C275074CD0065F9D1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				968F9D1F274F596D0065F9D1 /* modules */,
-				968F9D1D274F595E0065F9D1 /* RootState.swift */,
-				968F9D28274F5B660065F9D1 /* RootReducer.swift */,
-				968F9D2A274F62CD0065F9D1 /* InitializeRedux.swift */,
 			);
-			path = redux;
+			path = Controller;
 			sourceTree = "<group>";
 		};
-		968F9D1F274F596D0065F9D1 /* modules */ = {
+		968F9D2D275074CD0065F9D1 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				968F9D20274F59990065F9D1 /* counter */,
 			);
-			path = modules;
+			path = API;
 			sourceTree = "<group>";
 		};
-		968F9D20274F59990065F9D1 /* counter */ = {
+		968F9D2E275074CD0065F9D1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				968F9D21274F59BB0065F9D1 /* actions.swift */,
-				968F9D23274F59D50065F9D1 /* reducers.swift */,
-				968F9D25274F59E50065F9D1 /* state.swift */,
 			);
-			path = counter;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		968F9D2F275074CD0065F9D1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				968F9D30275074CD0065F9D1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		968F9D31275074CD0065F9D1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		968F9D32275074CD0065F9D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				968F9D4E275076C40065F9D1 /* CounterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		968F9D33275074CD0065F9D1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				968F9D4C275076200065F9D1 /* CounterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		968F9D632750831C0065F9D1 /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				968F9D642750831C0065F9D1 /* InitializeRedux.swift */,
+				968F9D652750831C0065F9D1 /* RootState.swift */,
+				968F9D662750831C0065F9D1 /* RootReducer.swift */,
+				968F9D672750831C0065F9D1 /* Modules */,
+			);
+			path = Redux;
+			sourceTree = "<group>";
+		};
+		968F9D672750831C0065F9D1 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				968F9D682750831C0065F9D1 /* Counter */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		968F9D682750831C0065F9D1 /* Counter */ = {
+			isa = PBXGroup;
+			children = (
+				968F9D692750831C0065F9D1 /* state.swift */,
+				968F9D6A2750831C0065F9D1 /* reducers.swift */,
+				968F9D6B2750831C0065F9D1 /* actions.swift */,
+				968F9D73275083400065F9D1 /* selectors.swift */,
+			);
+			path = Counter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96728847274DF79200454CC0 /* Preview Assets.xcassets in Resources */,
+				968F9D3D275074CD0065F9D1 /* Preview Assets.xcassets in Resources */,
 				96728844274DF79200454CC0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,14 +380,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96728842274DF79000454CC0 /* ContentView.swift in Sources */,
-				968F9D24274F59D50065F9D1 /* reducers.swift in Sources */,
-				968F9D2B274F62CD0065F9D1 /* InitializeRedux.swift in Sources */,
-				968F9D22274F59BB0065F9D1 /* actions.swift in Sources */,
-				968F9D1E274F595E0065F9D1 /* RootState.swift in Sources */,
+				968F9D4D275076200065F9D1 /* CounterViewModel.swift in Sources */,
+				968F9D712750831C0065F9D1 /* actions.swift in Sources */,
+				968F9D6D2750831C0065F9D1 /* RootState.swift in Sources */,
+				968F9D74275083400065F9D1 /* selectors.swift in Sources */,
 				96728840274DF79000454CC0 /* FindGitHubRepApp.swift in Sources */,
-				968F9D26274F59E50065F9D1 /* state.swift in Sources */,
-				968F9D29274F5B660065F9D1 /* RootReducer.swift in Sources */,
+				968F9D4F275076C40065F9D1 /* CounterView.swift in Sources */,
+				968F9D702750831C0065F9D1 /* reducers.swift in Sources */,
+				968F9D6C2750831C0065F9D1 /* InitializeRedux.swift in Sources */,
+				968F9D6E2750831C0065F9D1 /* RootReducer.swift in Sources */,
+				968F9D6F2750831C0065F9D1 /* state.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
