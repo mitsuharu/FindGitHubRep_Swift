@@ -13,7 +13,6 @@ class API{
     /**
      see: https://docs.github.com/en/rest/reference/search#search-repositories
      */
-    @available(iOS 15.0.0, *)
     func searchRepositories(keyword: String, page: Int = 1) async throws -> SearchRepositoryResult{
         return try await withCheckedThrowingContinuation({ continuation in
             AF.request(GitHubApiParams.urlSearchRepositories,
