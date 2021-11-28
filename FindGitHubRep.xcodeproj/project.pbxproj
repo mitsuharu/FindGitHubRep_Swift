@@ -9,14 +9,12 @@
 /* Begin PBXBuildFile section */
 		96728840274DF79000454CC0 /* FindGitHubRepApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9672883F274DF79000454CC0 /* FindGitHubRepApp.swift */; };
 		96728844274DF79200454CC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96728843274DF79200454CC0 /* Assets.xcassets */; };
-		96728847274DF79200454CC0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96728846274DF79200454CC0 /* Preview Assets.xcassets */; };
 		96728851274DF79300454CC0 /* FindGitHubRepTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96728850274DF79300454CC0 /* FindGitHubRepTests.swift */; };
 		9672885B274DF79300454CC0 /* FindGitHubRepUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9672885A274DF79300454CC0 /* FindGitHubRepUITests.swift */; };
 		9672885D274DF79300454CC0 /* FindGitHubRepUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9672885C274DF79300454CC0 /* FindGitHubRepUITestsLaunchTests.swift */; };
 		9672886B274DF8A300454CC0 /* ReMVVMCore in Frameworks */ = {isa = PBXBuildFile; productRef = 9672886A274DF8A300454CC0 /* ReMVVMCore */; };
 		9672886D274DF8A300454CC0 /* ReMVVMSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9672886C274DF8A300454CC0 /* ReMVVMSwiftUI */; };
 		96728870274DF90D00454CC0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9672886F274DF90D00454CC0 /* Alamofire */; };
-		968F9D3D275074CD0065F9D1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968F9D30275074CD0065F9D1 /* Preview Assets.xcassets */; };
 		968F9D4D275076200065F9D1 /* CounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D4C275076200065F9D1 /* CounterViewModel.swift */; };
 		968F9D4F275076C40065F9D1 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D4E275076C40065F9D1 /* CounterView.swift */; };
 		968F9D6C2750831C0065F9D1 /* InitializeRedux.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D642750831C0065F9D1 /* InitializeRedux.swift */; };
@@ -26,6 +24,11 @@
 		968F9D702750831C0065F9D1 /* reducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D6A2750831C0065F9D1 /* reducers.swift */; };
 		968F9D712750831C0065F9D1 /* actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D6B2750831C0065F9D1 /* actions.swift */; };
 		968F9D74275083400065F9D1 /* selectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D73275083400065F9D1 /* selectors.swift */; };
+		9BDBD17C275355FA008DB20C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBD17B275355FA008DB20C /* API.swift */; };
+		9BDBD18527536FCE008DB20C /* GitHubApiParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBD18427536FCE008DB20C /* GitHubApiParams.swift */; };
+		9BDBD18727536FE7008DB20C /* SearchRepositoryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBD18627536FE7008DB20C /* SearchRepositoryResult.swift */; };
+		9BDBD1892753718D008DB20C /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBD1882753718D008DB20C /* Repository.swift */; };
+		9BDBD18C27537A76008DB20C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BDBD18B27537A76008DB20C /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,13 +52,11 @@
 		9672883C274DF79000454CC0 /* FindGitHubRep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindGitHubRep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9672883F274DF79000454CC0 /* FindGitHubRepApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindGitHubRepApp.swift; sourceTree = "<group>"; };
 		96728843274DF79200454CC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		96728846274DF79200454CC0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9672884C274DF79300454CC0 /* FindGitHubRepTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindGitHubRepTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96728850274DF79300454CC0 /* FindGitHubRepTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindGitHubRepTests.swift; sourceTree = "<group>"; };
 		96728856274DF79300454CC0 /* FindGitHubRepUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindGitHubRepUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9672885A274DF79300454CC0 /* FindGitHubRepUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindGitHubRepUITests.swift; sourceTree = "<group>"; };
 		9672885C274DF79300454CC0 /* FindGitHubRepUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindGitHubRepUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		968F9D30275074CD0065F9D1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		968F9D4C275076200065F9D1 /* CounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewModel.swift; sourceTree = "<group>"; };
 		968F9D4E275076C40065F9D1 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		968F9D642750831C0065F9D1 /* InitializeRedux.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitializeRedux.swift; sourceTree = "<group>"; };
@@ -65,6 +66,11 @@
 		968F9D6A2750831C0065F9D1 /* reducers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = reducers.swift; sourceTree = "<group>"; };
 		968F9D6B2750831C0065F9D1 /* actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = actions.swift; sourceTree = "<group>"; };
 		968F9D73275083400065F9D1 /* selectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectors.swift; sourceTree = "<group>"; };
+		9BDBD17B275355FA008DB20C /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		9BDBD18427536FCE008DB20C /* GitHubApiParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubApiParams.swift; sourceTree = "<group>"; };
+		9BDBD18627536FE7008DB20C /* SearchRepositoryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoryResult.swift; sourceTree = "<group>"; };
+		9BDBD1882753718D008DB20C /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		9BDBD18B27537A76008DB20C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,27 +124,18 @@
 		9672883E274DF79000454CC0 /* FindGitHubRep */ = {
 			isa = PBXGroup;
 			children = (
-				968F9D632750831C0065F9D1 /* Redux */,
+				9672883F274DF79000454CC0 /* FindGitHubRepApp.swift */,
+				96728843274DF79200454CC0 /* Assets.xcassets */,
 				968F9D2D275074CD0065F9D1 /* API */,
 				968F9D2C275074CD0065F9D1 /* Controller */,
 				968F9D2E275074CD0065F9D1 /* Model */,
-				968F9D2F275074CD0065F9D1 /* Preview Content */,
+				9BDBD18A27537A3D008DB20C /* Preview Content */,
+				968F9D632750831C0065F9D1 /* Redux */,
 				968F9D31275074CD0065F9D1 /* Utils */,
 				968F9D32275074CD0065F9D1 /* View */,
 				968F9D33275074CD0065F9D1 /* ViewModel */,
-				9672883F274DF79000454CC0 /* FindGitHubRepApp.swift */,
-				96728843274DF79200454CC0 /* Assets.xcassets */,
-				96728845274DF79200454CC0 /* Preview Content */,
 			);
 			path = FindGitHubRep;
-			sourceTree = "<group>";
-		};
-		96728845274DF79200454CC0 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				96728846274DF79200454CC0 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		9672884F274DF79300454CC0 /* FindGitHubRepTests */ = {
@@ -168,6 +165,8 @@
 		968F9D2D275074CD0065F9D1 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				9BDBD18327536FCE008DB20C /* GitHub */,
+				9BDBD17B275355FA008DB20C /* API.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -177,14 +176,6 @@
 			children = (
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		968F9D2F275074CD0065F9D1 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				968F9D30275074CD0065F9D1 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		968F9D31275074CD0065F9D1 /* Utils */ = {
@@ -238,6 +229,24 @@
 				968F9D73275083400065F9D1 /* selectors.swift */,
 			);
 			path = Counter;
+			sourceTree = "<group>";
+		};
+		9BDBD18327536FCE008DB20C /* GitHub */ = {
+			isa = PBXGroup;
+			children = (
+				9BDBD18427536FCE008DB20C /* GitHubApiParams.swift */,
+				9BDBD18627536FE7008DB20C /* SearchRepositoryResult.swift */,
+				9BDBD1882753718D008DB20C /* Repository.swift */,
+			);
+			path = GitHub;
+			sourceTree = "<group>";
+		};
+		9BDBD18A27537A3D008DB20C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9BDBD18B27537A76008DB20C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,8 +362,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96728847274DF79200454CC0 /* Preview Assets.xcassets in Resources */,
-				968F9D3D275074CD0065F9D1 /* Preview Assets.xcassets in Resources */,
+				9BDBD18C27537A76008DB20C /* Preview Assets.xcassets in Resources */,
 				96728844274DF79200454CC0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,13 +388,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BDBD17C275355FA008DB20C /* API.swift in Sources */,
 				968F9D4D275076200065F9D1 /* CounterViewModel.swift in Sources */,
 				968F9D712750831C0065F9D1 /* actions.swift in Sources */,
 				968F9D6D2750831C0065F9D1 /* RootState.swift in Sources */,
 				968F9D74275083400065F9D1 /* selectors.swift in Sources */,
+				9BDBD1892753718D008DB20C /* Repository.swift in Sources */,
+				9BDBD18527536FCE008DB20C /* GitHubApiParams.swift in Sources */,
 				96728840274DF79000454CC0 /* FindGitHubRepApp.swift in Sources */,
 				968F9D4F275076C40065F9D1 /* CounterView.swift in Sources */,
 				968F9D702750831C0065F9D1 /* reducers.swift in Sources */,
+				9BDBD18727536FE7008DB20C /* SearchRepositoryResult.swift in Sources */,
 				968F9D6C2750831C0065F9D1 /* InitializeRedux.swift in Sources */,
 				968F9D6E2750831C0065F9D1 /* RootReducer.swift in Sources */,
 				968F9D6F2750831C0065F9D1 /* state.swift in Sources */,
@@ -558,7 +570,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -588,7 +600,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -9,22 +9,37 @@ import Foundation
 import ReMVVMSwiftUI
 
 final class CounterViewModel: ObservableObject, Initializable {
-
-  @Published private(set) var count: Int = 0
+    @Published private(set) var count: Int = 0
+    @ReMVVM.State<RootState> private var state
+    @ReMVVM.Dispatcher private var dispatcher
+    
+    var api: API = API()
   
-  @ReMVVM.State<RootState> private var state
-  @ReMVVM.Dispatcher private var dispatcher
+    required init() {
+        $state.map(selectCount).assign(to: &$count)
+    }
   
-  required init() {
-    $state.map(selectCount).assign(to: &$count)
-  }
+    public func increase()  {
+        dispatcher[CounterAction.increase]()
+      
+        // sample
+        Task {
+            do{
+               try await searchRepositories()
+            }catch{
+                debugPrint(error)
+            }
+        }
+    }
   
-  public func increase(){
-    dispatcher[CounterAction.increase]()
-  }
-  
-  func decrease(){
-    dispatcher[CounterAction.decrease]()
-  }
+    func decrease(){
+        dispatcher[CounterAction.decrease]()
+    }
+    
+    func searchRepositories()  async throws -> SearchRepositoryResult{
+        let result: SearchRepositoryResult = try await api.searchRepositories(keyword: "swift")
+        debugPrint("searchRepositories: total: \(result.total)")
+        return result
+    }
   
 }
