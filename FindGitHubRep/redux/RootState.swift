@@ -9,9 +9,13 @@ import Foundation
 import ReMVVMSwiftUI
 
 struct RootState: StoreState {
-  let counter: CounterState
+    let counter: CounterState
+    let repository: RepositoryState
   
-  static func initialState() -> RootState{
-    return RootState(counter: CounterState.initialState())
-  }
+    static func initialState() -> RootState{
+      return RootState(
+          counter: CounterState.initialState(),
+          repository: RepositoryState.initialState()
+      )
+    }
 }

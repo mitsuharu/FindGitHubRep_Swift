@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import Logging
+
+public let logger = Logger(label: "com.example.find.github.rep")
 
 @main
 struct FindGitHubRepApp: App {
@@ -14,7 +17,8 @@ struct FindGitHubRepApp: App {
   
     var body: some Scene {
         WindowGroup {
-          CounterView().source(with: store)
+            SearchListView().source(with: store)
+//          CounterView().source(with: store)
         }
     }
 }
