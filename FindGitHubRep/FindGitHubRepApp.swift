@@ -14,7 +14,8 @@ struct FindGitHubRepApp: App {
   
     var body: some Scene {
         WindowGroup {
-          CounterView().source(with: store)
+            SearchListView().source(with: store)
+//          CounterView().source(with: store)
         }
     }
 }

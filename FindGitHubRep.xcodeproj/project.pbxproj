@@ -24,6 +24,12 @@
 		968F9D702750831C0065F9D1 /* reducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D6A2750831C0065F9D1 /* reducers.swift */; };
 		968F9D712750831C0065F9D1 /* actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D6B2750831C0065F9D1 /* actions.swift */; };
 		968F9D74275083400065F9D1 /* selectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D73275083400065F9D1 /* selectors.swift */; };
+		96BA1DF9275DBC43006E3678 /* SearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA1DF8275DBC43006E3678 /* SearchListView.swift */; };
+		96BA1DFB275DE3EE006E3678 /* SearchListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA1DFA275DE3EE006E3678 /* SearchListViewModel.swift */; };
+		96BA1E01275DE6BA006E3678 /* RepState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA1DFD275DE6BA006E3678 /* RepState.swift */; };
+		96BA1E02275DE6BA006E3678 /* Repselectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA1DFE275DE6BA006E3678 /* Repselectors.swift */; };
+		96BA1E03275DE6BA006E3678 /* RepReducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA1DFF275DE6BA006E3678 /* RepReducers.swift */; };
+		96BA1E04275DE6BA006E3678 /* RepActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA1E00275DE6BA006E3678 /* RepActions.swift */; };
 		9BDBD17C275355FA008DB20C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBD17B275355FA008DB20C /* API.swift */; };
 		9BDBD18527536FCE008DB20C /* GitHubApiParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBD18427536FCE008DB20C /* GitHubApiParams.swift */; };
 		9BDBD18727536FE7008DB20C /* SearchRepositoryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBD18627536FE7008DB20C /* SearchRepositoryResult.swift */; };
@@ -66,6 +72,12 @@
 		968F9D6A2750831C0065F9D1 /* reducers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = reducers.swift; sourceTree = "<group>"; };
 		968F9D6B2750831C0065F9D1 /* actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = actions.swift; sourceTree = "<group>"; };
 		968F9D73275083400065F9D1 /* selectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectors.swift; sourceTree = "<group>"; };
+		96BA1DF8275DBC43006E3678 /* SearchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListView.swift; sourceTree = "<group>"; };
+		96BA1DFA275DE3EE006E3678 /* SearchListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListViewModel.swift; sourceTree = "<group>"; };
+		96BA1DFD275DE6BA006E3678 /* RepState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepState.swift; sourceTree = "<group>"; };
+		96BA1DFE275DE6BA006E3678 /* Repselectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repselectors.swift; sourceTree = "<group>"; };
+		96BA1DFF275DE6BA006E3678 /* RepReducers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepReducers.swift; sourceTree = "<group>"; };
+		96BA1E00275DE6BA006E3678 /* RepActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepActions.swift; sourceTree = "<group>"; };
 		9BDBD17B275355FA008DB20C /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		9BDBD18427536FCE008DB20C /* GitHubApiParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubApiParams.swift; sourceTree = "<group>"; };
 		9BDBD18627536FE7008DB20C /* SearchRepositoryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoryResult.swift; sourceTree = "<group>"; };
@@ -189,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				968F9D4E275076C40065F9D1 /* CounterView.swift */,
+				96BA1DF8275DBC43006E3678 /* SearchListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -197,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				968F9D4C275076200065F9D1 /* CounterViewModel.swift */,
+				96BA1DFA275DE3EE006E3678 /* SearchListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -215,6 +229,7 @@
 		968F9D672750831C0065F9D1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				96BA1DFC275DE6BA006E3678 /* Repository */,
 				968F9D682750831C0065F9D1 /* Counter */,
 			);
 			path = Modules;
@@ -229,6 +244,17 @@
 				968F9D73275083400065F9D1 /* selectors.swift */,
 			);
 			path = Counter;
+			sourceTree = "<group>";
+		};
+		96BA1DFC275DE6BA006E3678 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				96BA1DFD275DE6BA006E3678 /* RepState.swift */,
+				96BA1DFE275DE6BA006E3678 /* Repselectors.swift */,
+				96BA1DFF275DE6BA006E3678 /* RepReducers.swift */,
+				96BA1E00275DE6BA006E3678 /* RepActions.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		9BDBD18327536FCE008DB20C /* GitHub */ = {
@@ -389,7 +415,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BDBD17C275355FA008DB20C /* API.swift in Sources */,
+				96BA1E04275DE6BA006E3678 /* RepActions.swift in Sources */,
 				968F9D4D275076200065F9D1 /* CounterViewModel.swift in Sources */,
+				96BA1E01275DE6BA006E3678 /* RepState.swift in Sources */,
+				96BA1DFB275DE3EE006E3678 /* SearchListViewModel.swift in Sources */,
 				968F9D712750831C0065F9D1 /* actions.swift in Sources */,
 				968F9D6D2750831C0065F9D1 /* RootState.swift in Sources */,
 				968F9D74275083400065F9D1 /* selectors.swift in Sources */,
@@ -397,6 +426,9 @@
 				9BDBD18527536FCE008DB20C /* GitHubApiParams.swift in Sources */,
 				96728840274DF79000454CC0 /* FindGitHubRepApp.swift in Sources */,
 				968F9D4F275076C40065F9D1 /* CounterView.swift in Sources */,
+				96BA1DF9275DBC43006E3678 /* SearchListView.swift in Sources */,
+				96BA1E03275DE6BA006E3678 /* RepReducers.swift in Sources */,
+				96BA1E02275DE6BA006E3678 /* Repselectors.swift in Sources */,
 				968F9D702750831C0065F9D1 /* reducers.swift in Sources */,
 				9BDBD18727536FE7008DB20C /* SearchRepositoryResult.swift in Sources */,
 				968F9D6C2750831C0065F9D1 /* InitializeRedux.swift in Sources */,
