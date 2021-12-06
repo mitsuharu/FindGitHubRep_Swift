@@ -14,6 +14,7 @@ struct RepositoryState: StoreState {
     let keyword: String
     let page: Int
     let total: Int
+    let hasNext: Bool
     let items: Array<Repository>
     let error: Error?
     
@@ -23,6 +24,7 @@ struct RepositoryState: StoreState {
             keyword: "",
             page: 0,
             total: 0,
+            hasNext: true,
             items: [],
             error: nil
         )
@@ -33,6 +35,7 @@ struct RepositoryState: StoreState {
         keyword: String? = nil,
         page: Int? = nil,
         total: Int? = nil,
+        hasNext: Bool? = nil,
         items: Array<Repository>? = nil,
         error: Error? = nil) -> RepositoryState
     {
@@ -41,6 +44,7 @@ struct RepositoryState: StoreState {
             keyword: keyword ?? self.keyword,
             page: page ?? self.page,
             total: total ?? self.total,
+            hasNext: hasNext ?? self.hasNext,
             items: items ?? self.items,
             error: error ?? self.error
         )

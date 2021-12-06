@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import Logging
+
+public let logger = Logger(label: "com.example.find.github.rep")
 
 @main
 struct FindGitHubRepApp: App {

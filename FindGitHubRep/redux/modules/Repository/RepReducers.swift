@@ -17,15 +17,21 @@ enum RepositoryReducer: Reducer {
                     keyword: keyword,
                     page: page,
                     total:  page == 1 ? 0 : state.total,
+                    hasNext: page == 1 ? true : state.hasNext,
                     items: page == 1 ? [] : state.items,
                     error: nil)
                 
-            case .fetchSucceeded(let value):
+            case .succeeded(let value):
                 let nextItems = state.items + value.items
-                return state.copyWith(isRequesting:false, total: value.total, items: nextItems, error: nil)
+                let nextHasNext = state.items.count == 0 || state.items.count >= state.total
+                return state.copyWith(
+                    isRequesting:false,
+                    total: value.total,
+                    hasNext: nextHasNext,
+                    items: nextItems, error: nil)
                 
-            case .fetchFailed(let value):
-                return state.copyWith(isRequesting:false, error: value)
+            case .failed(let value):
+                return state.copyWith(isRequesting:false, hasNext: false, error: value)
                         
             case .clear:
                 return RepositoryState.initialState()

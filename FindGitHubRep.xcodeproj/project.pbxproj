@@ -35,6 +35,7 @@
 		9BDBD18727536FE7008DB20C /* SearchRepositoryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBD18627536FE7008DB20C /* SearchRepositoryResult.swift */; };
 		9BDBD1892753718D008DB20C /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBD1882753718D008DB20C /* Repository.swift */; };
 		9BDBD18C27537A76008DB20C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BDBD18B27537A76008DB20C /* Preview Assets.xcassets */; };
+		9BDBD18F275E187D008DB20C /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 9BDBD18E275E187D008DB20C /* Logging */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 			files = (
 				96728870274DF90D00454CC0 /* Alamofire in Frameworks */,
 				9672886B274DF8A300454CC0 /* ReMVVMCore in Frameworks */,
+				9BDBD18F275E187D008DB20C /* Logging in Frameworks */,
 				9672886D274DF8A300454CC0 /* ReMVVMSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +297,7 @@
 				9672886A274DF8A300454CC0 /* ReMVVMCore */,
 				9672886C274DF8A300454CC0 /* ReMVVMSwiftUI */,
 				9672886F274DF90D00454CC0 /* Alamofire */,
+				9BDBD18E275E187D008DB20C /* Logging */,
 			);
 			productName = FindGitHubRep;
 			productReference = 9672883C274DF79000454CC0 /* FindGitHubRep.app */;
@@ -371,6 +374,7 @@
 			packageReferences = (
 				96728869274DF8A300454CC0 /* XCRemoteSwiftPackageReference "ReMVVM" */,
 				9672886E274DF90D00454CC0 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				9BDBD18D275E187C008DB20C /* XCRemoteSwiftPackageReference "swift-log" */,
 			);
 			productRefGroup = 9672883D274DF79000454CC0 /* Products */;
 			projectDirPath = "";
@@ -800,6 +804,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		9BDBD18D275E187C008DB20C /* XCRemoteSwiftPackageReference "swift-log" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-log";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.4.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -817,6 +829,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9672886E274DF90D00454CC0 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		9BDBD18E275E187D008DB20C /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9BDBD18D275E187C008DB20C /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

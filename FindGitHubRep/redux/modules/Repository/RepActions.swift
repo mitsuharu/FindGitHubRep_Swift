@@ -10,8 +10,7 @@ import ReMVVMSwiftUI
 
 enum RepositoryAction: StoreAction {
     case fetch(keyword: String, page: Int)
-    case fetchSucceeded(SearchRepositoryResult)
-    case fetchFailed(Error)
-    
+    case succeeded(SearchRepositoryResult)
+    case failed(Error)
     case clear
 }
