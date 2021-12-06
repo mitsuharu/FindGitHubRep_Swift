@@ -10,6 +10,10 @@ import Alamofire
 
 class API{
     
+    func delay(sec: Double) async {
+        await Task.sleep(UInt64(sec) * 1_000_000_000)
+    }
+    
     /**
      see: https://docs.github.com/en/rest/reference/search#search-repositories
      */
@@ -27,11 +31,12 @@ class API{
                                                               from: value)
                         continuation.resume(returning: result)
                     }catch{
+                        logger.warning("searchRepositories: json, url: \(response.request?.url?.absoluteString ?? ""), value: \(value), error: \(error)")
                         continuation.resume(throwing: error)
                     }
                     return
                 case .failure(let error):
-                    debugPrint("searchRepositories error:\(error)")
+                    logger.warning("searchRepositories:api, url: \(response.request?.url?.absoluteString ?? ""), error:\(error)")
                     continuation.resume(throwing: error)
                     return
                 }

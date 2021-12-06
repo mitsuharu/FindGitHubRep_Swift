@@ -13,7 +13,7 @@ struct Repository: Codable {
     let name: String
     let fullName: String
     let url: String
-    let description: String
+    let description: String?
     
     enum CodingKeys: String, CodingKey {
         case id
