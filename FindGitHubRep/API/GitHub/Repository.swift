@@ -7,13 +7,17 @@
 
 import Foundation
 
-struct Repository: Codable {
+struct Repository: Codable, Identifiable {
     
     let id: Int
     let name: String
     let fullName: String
     let url: String
     let description: String?
+    let owner: User
+    let stars: Int
+    let watchers: Int
+    let topics: [String]
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -21,5 +25,10 @@ struct Repository: Codable {
         case fullName = "full_name"
         case url = "html_url"
         case description
+        case owner
+        case stars = "stargazers_count"
+        case watchers = "watchers_count"
+        case topics
     }
 }
+

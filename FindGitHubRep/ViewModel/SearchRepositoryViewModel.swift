@@ -8,7 +8,7 @@
 import Foundation
 import ReMVVMSwiftUI
 
-final class SearchListViewModel: ObservableObject, Initializable {
+final class SearchRepositoryViewModel: ObservableObject, Initializable {
     @Published private(set) var isRequesting: Bool = false
     @Published private(set) var keyword: String = ""
     @Published private(set) var page: Int = 0
