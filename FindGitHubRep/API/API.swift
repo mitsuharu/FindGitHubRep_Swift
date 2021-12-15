@@ -15,6 +15,9 @@ class API{
     }
     
     /**
+     
+     example: https://api.github.com/search/repositories?page=1&per_page=30&q=swift%20in%3Aname&sort=stars
+     
      see: https://docs.github.com/en/rest/reference/search#search-repositories
      */
     func searchRepositories(keyword: String, page: Int = 1) async throws -> SearchRepositoryResult{
@@ -24,6 +27,9 @@ class API{
                        parameters: GitHubApiParams.parameters(keyword: keyword, page: page),
                        encoding: URLEncoding.default,
                        headers: GitHubApiParams.headers).responseData{ response in
+                
+                print(response.request?.url?.absoluteString ?? "")
+                
                 switch response.result{
                     case .success(let value):
                     do{
