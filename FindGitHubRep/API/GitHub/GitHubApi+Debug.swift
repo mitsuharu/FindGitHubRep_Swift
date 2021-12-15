@@ -31,14 +31,17 @@ extension Repository {
     /**
      検証など向けのダミーデータ
      */
-    static func Dummy() -> Repository{
+    static func Dummy(id: Int) -> Repository{
         return Repository(
-            id: 1,
-            name: "dummy-name",
-            fullName: "Dummpy Name",
+            id: id,
+            name: "dummy-name-" + String(id),
+            fullName: "Dummpy Name " + String(id),
             url: "https://example.com/",
             description: "it is a dummy data!",
-            owner: User.Dummy()
+            owner: User.Dummy(),
+            stars: 10,
+            watchers: 20,
+            topics: ["dummy-topic-0", "dummy-topic-1"]
         )
     }
     
@@ -52,14 +55,7 @@ extension Repository {
         }
         
         return Array(0...count).map{
-            Repository(
-                id: $0,
-                name: "dummy-name-" + String($0),
-                fullName: "Dummpy Name " + String($0),
-                url: "https://example.com/",
-                description: "it is a dummy data!",
-                owner: User.Dummy()
-            )
+            Repository.Dummy(id: $0)
         }
     }
 }

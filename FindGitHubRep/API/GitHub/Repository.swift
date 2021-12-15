@@ -15,6 +15,9 @@ struct Repository: Codable, Identifiable {
     let url: String
     let description: String?
     let owner: User
+    let stars: Int
+    let watchers: Int
+    let topics: [String]
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -23,6 +26,9 @@ struct Repository: Codable, Identifiable {
         case url = "html_url"
         case description
         case owner
+        case stars = "stargazers_count"
+        case watchers = "watchers_count"
+        case topics
     }
 }
 
