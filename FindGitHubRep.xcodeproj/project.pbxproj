@@ -12,9 +12,6 @@
 		96728851274DF79300454CC0 /* FindGitHubRepTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96728850274DF79300454CC0 /* FindGitHubRepTests.swift */; };
 		9672885B274DF79300454CC0 /* FindGitHubRepUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9672885A274DF79300454CC0 /* FindGitHubRepUITests.swift */; };
 		9672885D274DF79300454CC0 /* FindGitHubRepUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9672885C274DF79300454CC0 /* FindGitHubRepUITestsLaunchTests.swift */; };
-		9672886B274DF8A300454CC0 /* ReMVVMCore in Frameworks */ = {isa = PBXBuildFile; productRef = 9672886A274DF8A300454CC0 /* ReMVVMCore */; };
-		9672886D274DF8A300454CC0 /* ReMVVMSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9672886C274DF8A300454CC0 /* ReMVVMSwiftUI */; };
-		96728870274DF90D00454CC0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9672886F274DF90D00454CC0 /* Alamofire */; };
 		968F9D4D275076200065F9D1 /* CounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D4C275076200065F9D1 /* CounterViewModel.swift */; };
 		968F9D4F275076C40065F9D1 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D4E275076C40065F9D1 /* CounterView.swift */; };
 		968F9D6C2750831C0065F9D1 /* InitializeRedux.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D642750831C0065F9D1 /* InitializeRedux.swift */; };
@@ -30,19 +27,22 @@
 		96B123A9276975A30075DF2E /* SearchRepositoryResult.json in Resources */ = {isa = PBXBuildFile; fileRef = 96B123A8276975A30075DF2E /* SearchRepositoryResult.json */; };
 		96B123AB2769777C0075DF2E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B123AA2769777C0075DF2E /* User.swift */; };
 		96B123AD2769849A0075DF2E /* RemoteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B123AC2769849A0075DF2E /* RemoteImageView.swift */; };
-		96B123B0276986320075DF2E /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 96B123AF276986320075DF2E /* AlamofireImage */; };
 		96B2C9CE2769A9530073DB41 /* BetterSafariView in Frameworks */ = {isa = PBXBuildFile; productRef = 96B2C9CD2769A9530073DB41 /* BetterSafariView */; };
 		96BA1DFB275DE3EE006E3678 /* SearchRepositoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA1DFA275DE3EE006E3678 /* SearchRepositoryViewModel.swift */; };
 		96BA1E01275DE6BA006E3678 /* RepState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA1DFD275DE6BA006E3678 /* RepState.swift */; };
 		96BA1E02275DE6BA006E3678 /* Repselectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA1DFE275DE6BA006E3678 /* Repselectors.swift */; };
 		96BA1E03275DE6BA006E3678 /* RepReducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA1DFF275DE6BA006E3678 /* RepReducers.swift */; };
 		96BA1E04275DE6BA006E3678 /* RepActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA1E00275DE6BA006E3678 /* RepActions.swift */; };
+		9B79CAAC27957798006EE615 /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 9B79CAAB27957798006EE615 /* Logging */; };
+		9B79CAAF2795782D006EE615 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9B79CAAE2795782D006EE615 /* Alamofire */; };
+		9B79CAB227957869006EE615 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9B79CAB127957869006EE615 /* AlamofireImage */; };
+		9B79CAB52795789C006EE615 /* ReMVVMCore in Frameworks */ = {isa = PBXBuildFile; productRef = 9B79CAB42795789C006EE615 /* ReMVVMCore */; };
+		9B79CAB72795789C006EE615 /* ReMVVMSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9B79CAB62795789C006EE615 /* ReMVVMSwiftUI */; };
 		9BDBD17C275355FA008DB20C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBD17B275355FA008DB20C /* API.swift */; };
 		9BDBD18527536FCE008DB20C /* GitHubApiParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBD18427536FCE008DB20C /* GitHubApiParams.swift */; };
 		9BDBD18727536FE7008DB20C /* SearchRepositoryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBD18627536FE7008DB20C /* SearchRepositoryResult.swift */; };
 		9BDBD1892753718D008DB20C /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBD1882753718D008DB20C /* Repository.swift */; };
 		9BDBD18C27537A76008DB20C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BDBD18B27537A76008DB20C /* Preview Assets.xcassets */; };
-		9BDBD18F275E187D008DB20C /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 9BDBD18E275E187D008DB20C /* Logging */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,12 +103,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96728870274DF90D00454CC0 /* Alamofire in Frameworks */,
+				9B79CAB52795789C006EE615 /* ReMVVMCore in Frameworks */,
+				9B79CAB72795789C006EE615 /* ReMVVMSwiftUI in Frameworks */,
+				9B79CAAC27957798006EE615 /* Logging in Frameworks */,
 				96B2C9CE2769A9530073DB41 /* BetterSafariView in Frameworks */,
-				9672886B274DF8A300454CC0 /* ReMVVMCore in Frameworks */,
-				96B123B0276986320075DF2E /* AlamofireImage in Frameworks */,
-				9BDBD18F275E187D008DB20C /* Logging in Frameworks */,
-				9672886D274DF8A300454CC0 /* ReMVVMSwiftUI in Frameworks */,
+				9B79CAAF2795782D006EE615 /* Alamofire in Frameworks */,
+				9B79CAB227957869006EE615 /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,12 +329,12 @@
 			);
 			name = FindGitHubRep;
 			packageProductDependencies = (
-				9672886A274DF8A300454CC0 /* ReMVVMCore */,
-				9672886C274DF8A300454CC0 /* ReMVVMSwiftUI */,
-				9672886F274DF90D00454CC0 /* Alamofire */,
-				9BDBD18E275E187D008DB20C /* Logging */,
-				96B123AF276986320075DF2E /* AlamofireImage */,
 				96B2C9CD2769A9530073DB41 /* BetterSafariView */,
+				9B79CAAB27957798006EE615 /* Logging */,
+				9B79CAAE2795782D006EE615 /* Alamofire */,
+				9B79CAB127957869006EE615 /* AlamofireImage */,
+				9B79CAB42795789C006EE615 /* ReMVVMCore */,
+				9B79CAB62795789C006EE615 /* ReMVVMSwiftUI */,
 			);
 			productName = FindGitHubRep;
 			productReference = 9672883C274DF79000454CC0 /* FindGitHubRep.app */;
@@ -409,11 +409,11 @@
 			);
 			mainGroup = 96728833274DF79000454CC0;
 			packageReferences = (
-				96728869274DF8A300454CC0 /* XCRemoteSwiftPackageReference "ReMVVM" */,
-				9672886E274DF90D00454CC0 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				9BDBD18D275E187C008DB20C /* XCRemoteSwiftPackageReference "swift-log" */,
-				96B123AE276986310075DF2E /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 				96B2C9CC2769A9530073DB41 /* XCRemoteSwiftPackageReference "BetterSafariView" */,
+				9B79CAAA27957798006EE615 /* XCRemoteSwiftPackageReference "swift-log" */,
+				9B79CAAD2795782D006EE615 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				9B79CAB027957869006EE615 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+				9B79CAB32795789C006EE615 /* XCRemoteSwiftPackageReference "ReMVVM" */,
 			);
 			productRefGroup = 9672883D274DF79000454CC0 /* Products */;
 			projectDirPath = "";
@@ -832,30 +832,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		96728869274DF8A300454CC0 /* XCRemoteSwiftPackageReference "ReMVVM" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReMVVM/ReMVVM";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
-			};
-		};
-		9672886E274DF90D00454CC0 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-		96B123AE276986310075DF2E /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/AlamofireImage";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.2.0;
-			};
-		};
 		96B2C9CC2769A9530073DB41 /* XCRemoteSwiftPackageReference "BetterSafariView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/stleamist/BetterSafariView";
@@ -864,46 +840,70 @@
 				minimumVersion = 2.4.0;
 			};
 		};
-		9BDBD18D275E187C008DB20C /* XCRemoteSwiftPackageReference "swift-log" */ = {
+		9B79CAAA27957798006EE615 /* XCRemoteSwiftPackageReference "swift-log" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apple/swift-log";
 			requirement = {
-				kind = upToNextMinorVersion;
+				kind = upToNextMajorVersion;
 				minimumVersion = 1.4.2;
+			};
+		};
+		9B79CAAD2795782D006EE615 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.5.0;
+			};
+		};
+		9B79CAB027957869006EE615 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.0;
+			};
+		};
+		9B79CAB32795789C006EE615 /* XCRemoteSwiftPackageReference "ReMVVM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReMVVM/ReMVVM";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9672886A274DF8A300454CC0 /* ReMVVMCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 96728869274DF8A300454CC0 /* XCRemoteSwiftPackageReference "ReMVVM" */;
-			productName = ReMVVMCore;
-		};
-		9672886C274DF8A300454CC0 /* ReMVVMSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 96728869274DF8A300454CC0 /* XCRemoteSwiftPackageReference "ReMVVM" */;
-			productName = ReMVVMSwiftUI;
-		};
-		9672886F274DF90D00454CC0 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9672886E274DF90D00454CC0 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		96B123AF276986320075DF2E /* AlamofireImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 96B123AE276986310075DF2E /* XCRemoteSwiftPackageReference "AlamofireImage" */;
-			productName = AlamofireImage;
-		};
 		96B2C9CD2769A9530073DB41 /* BetterSafariView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 96B2C9CC2769A9530073DB41 /* XCRemoteSwiftPackageReference "BetterSafariView" */;
 			productName = BetterSafariView;
 		};
-		9BDBD18E275E187D008DB20C /* Logging */ = {
+		9B79CAAB27957798006EE615 /* Logging */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9BDBD18D275E187C008DB20C /* XCRemoteSwiftPackageReference "swift-log" */;
+			package = 9B79CAAA27957798006EE615 /* XCRemoteSwiftPackageReference "swift-log" */;
 			productName = Logging;
+		};
+		9B79CAAE2795782D006EE615 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B79CAAD2795782D006EE615 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		9B79CAB127957869006EE615 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B79CAB027957869006EE615 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+		9B79CAB42795789C006EE615 /* ReMVVMCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B79CAB32795789C006EE615 /* XCRemoteSwiftPackageReference "ReMVVM" */;
+			productName = ReMVVMCore;
+		};
+		9B79CAB62795789C006EE615 /* ReMVVMSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B79CAB32795789C006EE615 /* XCRemoteSwiftPackageReference "ReMVVM" */;
+			productName = ReMVVMSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
