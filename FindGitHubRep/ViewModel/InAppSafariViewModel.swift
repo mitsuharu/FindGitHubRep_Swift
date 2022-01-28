@@ -9,8 +9,12 @@ import Foundation
 import ReMVVMSwiftUI
 import SwiftUI
 
-final class SafariViewModel: ObservableObject, Initializable {
-    @Published private(set) var resource: SafariViewResource? = nil
+final class InAppSafariViewModel: ObservableObject, Initializable {
+
+    // BetterSafariView が書き込むので private(set) は不要
+    // ただし、BetterSafariView#onDismiss で InAppSafariViewModel#dissmiss を呼ぶ必要あり
+    @Published var resource: SafariViewResource? = nil
+    
     @ReMVVM.State<RootState> private var state
     @ReMVVM.Dispatcher private var dispatcher
         
@@ -25,5 +29,4 @@ final class SafariViewModel: ObservableObject, Initializable {
     func dissmiss(){
         dispatcher[SafariViewAction.dismiss]()
     }
-    
 }

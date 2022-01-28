@@ -12,7 +12,6 @@ import BetterSafariView
 struct SearchRepositoryListView: View {
 
     @State private var searchText: String = ""
-    @State private var presentingRepositoryInSafariView: Repository? = nil
     @ReMVVM.ViewModel private var viewModel: SearchRepositoryViewModel!
     
     var body: some View {
@@ -24,7 +23,7 @@ struct SearchRepositoryListView: View {
                 } else{
                     ForEach(viewModel.items){ item in
                         Button {
-                            self.presentingRepositoryInSafariView = item
+                            viewModel.openInAppSafariView(url: item.url)
                         } label: {
                             RepositoryItem(repository: item).onAppear {
                                 if item.id == viewModel.items.last?.id {
@@ -42,17 +41,6 @@ struct SearchRepositoryListView: View {
                 placement: .navigationBarDrawer(displayMode: .always)
             ).onChange(of: searchText) { newValue in
                 viewModel.requestRepositories(keyword: newValue)
-            }.safariView(item: $presentingRepositoryInSafariView) { rep in
-                SafariView(
-                    url: URL(string: rep.url)!,
-                    configuration: SafariView.Configuration(
-                        entersReaderIfAvailable: false,
-                        barCollapsingEnabled: true
-                    )
-                )
-                    .preferredBarAccentColor(.clear)
-                    .preferredControlAccentColor(.accentColor)
-                    .dismissButtonStyle(.close)
             }
         }
     }

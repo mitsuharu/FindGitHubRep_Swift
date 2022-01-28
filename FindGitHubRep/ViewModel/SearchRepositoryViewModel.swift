@@ -70,5 +70,13 @@ final class SearchRepositoryViewModel: ObservableObject, Initializable {
                 self.dispatcher[RepositoryAction.failed(error)]()
             }
         }
-    }  
+    }
+    
+    public func openInAppSafariView(url :String)  {
+        dispatcher[SafariViewAction.show(url: url)]()
+    }
+  
+    func dissmissInAppSafariView(){
+        dispatcher[SafariViewAction.dismiss]()
+    }
 }
