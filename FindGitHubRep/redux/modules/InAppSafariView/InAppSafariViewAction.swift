@@ -8,7 +8,7 @@
 import Foundation
 import ReMVVMSwiftUI
 
-enum SafariViewAction: StoreAction {
+enum InAppSafariViewAction: StoreAction {
     case show(url: String)
     case dismiss
 }

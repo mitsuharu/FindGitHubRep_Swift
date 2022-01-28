@@ -73,10 +73,10 @@ final class SearchRepositoryViewModel: ObservableObject, Initializable {
     }
     
     public func openInAppSafariView(url :String)  {
-        dispatcher[SafariViewAction.show(url: url)]()
+        dispatcher[InAppSafariViewAction.show(url: url)]()
     }
   
     func dissmissInAppSafariView(){
-        dispatcher[SafariViewAction.dismiss]()
+        dispatcher[InAppSafariViewAction.dismiss]()
     }
 }

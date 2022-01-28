@@ -38,10 +38,10 @@
 		9B79CAB227957869006EE615 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9B79CAB127957869006EE615 /* AlamofireImage */; };
 		9B79CAB52795789C006EE615 /* ReMVVMCore in Frameworks */ = {isa = PBXBuildFile; productRef = 9B79CAB42795789C006EE615 /* ReMVVMCore */; };
 		9B79CAB72795789C006EE615 /* ReMVVMSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9B79CAB62795789C006EE615 /* ReMVVMSwiftUI */; };
-		9B79CABD2795791E006EE615 /* SafariViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B79CAB92795791E006EE615 /* SafariViewState.swift */; };
-		9B79CABE2795791E006EE615 /* SafariViewSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B79CABA2795791E006EE615 /* SafariViewSelectors.swift */; };
-		9B79CABF2795791E006EE615 /* SafariViewReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B79CABB2795791E006EE615 /* SafariViewReducer.swift */; };
-		9B79CAC02795791E006EE615 /* SafariViewAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B79CABC2795791E006EE615 /* SafariViewAction.swift */; };
+		9B79CABD2795791E006EE615 /* InAppSafariViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B79CAB92795791E006EE615 /* InAppSafariViewState.swift */; };
+		9B79CABE2795791E006EE615 /* InAppSafariViewSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B79CABA2795791E006EE615 /* InAppSafariViewSelectors.swift */; };
+		9B79CABF2795791E006EE615 /* InAppSafariViewReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B79CABB2795791E006EE615 /* InAppSafariViewReducer.swift */; };
+		9B79CAC02795791E006EE615 /* InAppSafariViewAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B79CABC2795791E006EE615 /* InAppSafariViewAction.swift */; };
 		9B79CAC227957D37006EE615 /* InAppSafariViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B79CAC127957D37006EE615 /* InAppSafariViewModel.swift */; };
 		9BDBD17C275355FA008DB20C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBD17B275355FA008DB20C /* API.swift */; };
 		9BDBD18527536FCE008DB20C /* GitHubApiParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBD18427536FCE008DB20C /* GitHubApiParams.swift */; };
@@ -97,10 +97,10 @@
 		96BA1DFE275DE6BA006E3678 /* Repselectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repselectors.swift; sourceTree = "<group>"; };
 		96BA1DFF275DE6BA006E3678 /* RepReducers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepReducers.swift; sourceTree = "<group>"; };
 		96BA1E00275DE6BA006E3678 /* RepActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepActions.swift; sourceTree = "<group>"; };
-		9B79CAB92795791E006EE615 /* SafariViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariViewState.swift; sourceTree = "<group>"; };
-		9B79CABA2795791E006EE615 /* SafariViewSelectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariViewSelectors.swift; sourceTree = "<group>"; };
-		9B79CABB2795791E006EE615 /* SafariViewReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariViewReducer.swift; sourceTree = "<group>"; };
-		9B79CABC2795791E006EE615 /* SafariViewAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariViewAction.swift; sourceTree = "<group>"; };
+		9B79CAB92795791E006EE615 /* InAppSafariViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppSafariViewState.swift; sourceTree = "<group>"; };
+		9B79CABA2795791E006EE615 /* InAppSafariViewSelectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppSafariViewSelectors.swift; sourceTree = "<group>"; };
+		9B79CABB2795791E006EE615 /* InAppSafariViewReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppSafariViewReducer.swift; sourceTree = "<group>"; };
+		9B79CABC2795791E006EE615 /* InAppSafariViewAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppSafariViewAction.swift; sourceTree = "<group>"; };
 		9B79CAC127957D37006EE615 /* InAppSafariViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppSafariViewModel.swift; sourceTree = "<group>"; };
 		9BDBD17B275355FA008DB20C /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		9BDBD18427536FCE008DB20C /* GitHubApiParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubApiParams.swift; sourceTree = "<group>"; };
@@ -261,7 +261,7 @@
 		968F9D672750831C0065F9D1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				9B79CAB82795791E006EE615 /* SafariView */,
+				9B79CAB82795791E006EE615 /* InAppSafariView */,
 				96BA1DFC275DE6BA006E3678 /* Repository */,
 				968F9D682750831C0065F9D1 /* Counter */,
 			);
@@ -307,16 +307,16 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
-		9B79CAB82795791E006EE615 /* SafariView */ = {
+		9B79CAB82795791E006EE615 /* InAppSafariView */ = {
 			isa = PBXGroup;
 			children = (
-				9B79CAB92795791E006EE615 /* SafariViewState.swift */,
-				9B79CABA2795791E006EE615 /* SafariViewSelectors.swift */,
-				9B79CABB2795791E006EE615 /* SafariViewReducer.swift */,
-				9B79CABC2795791E006EE615 /* SafariViewAction.swift */,
+				9B79CAB92795791E006EE615 /* InAppSafariViewState.swift */,
+				9B79CABA2795791E006EE615 /* InAppSafariViewSelectors.swift */,
+				9B79CABB2795791E006EE615 /* InAppSafariViewReducer.swift */,
+				9B79CABC2795791E006EE615 /* InAppSafariViewAction.swift */,
 			);
-			name = SafariView;
-			path = FindGitHubRep/redux/modules/SafariView;
+			name = InAppSafariView;
+			path = FindGitHubRep/redux/modules/InAppSafariView;
 			sourceTree = SOURCE_ROOT;
 		};
 		9BDBD18327536FCE008DB20C /* GitHub */ = {
@@ -498,8 +498,8 @@
 				96B123AD2769849A0075DF2E /* RemoteImageView.swift in Sources */,
 				968F9D4D275076200065F9D1 /* CounterViewModel.swift in Sources */,
 				96BA1E01275DE6BA006E3678 /* RepState.swift in Sources */,
-				9B79CAC02795791E006EE615 /* SafariViewAction.swift in Sources */,
-				9B79CABF2795791E006EE615 /* SafariViewReducer.swift in Sources */,
+				9B79CAC02795791E006EE615 /* InAppSafariViewAction.swift in Sources */,
+				9B79CABF2795791E006EE615 /* InAppSafariViewReducer.swift in Sources */,
 				96BA1DFB275DE3EE006E3678 /* SearchRepositoryViewModel.swift in Sources */,
 				968F9D712750831C0065F9D1 /* actions.swift in Sources */,
 				96B123A6276974A90075DF2E /* SearchRepositoryView.swift in Sources */,
@@ -507,7 +507,7 @@
 				968F9D74275083400065F9D1 /* selectors.swift in Sources */,
 				9BDBD1892753718D008DB20C /* Repository.swift in Sources */,
 				9BDBD18527536FCE008DB20C /* GitHubApiParams.swift in Sources */,
-				9B79CABD2795791E006EE615 /* SafariViewState.swift in Sources */,
+				9B79CABD2795791E006EE615 /* InAppSafariViewState.swift in Sources */,
 				96728840274DF79000454CC0 /* FindGitHubRepApp.swift in Sources */,
 				968F9D4F275076C40065F9D1 /* CounterView.swift in Sources */,
 				96BA1E03275DE6BA006E3678 /* RepReducers.swift in Sources */,
@@ -519,7 +519,7 @@
 				96B1238E27696E360075DF2E /* GitHubApi+Debug.swift in Sources */,
 				968F9D6E2750831C0065F9D1 /* RootReducer.swift in Sources */,
 				968F9D6F2750831C0065F9D1 /* state.swift in Sources */,
-				9B79CABE2795791E006EE615 /* SafariViewSelectors.swift in Sources */,
+				9B79CABE2795791E006EE615 /* InAppSafariViewSelectors.swift in Sources */,
 				96B123AB2769777C0075DF2E /* User.swift in Sources */,
 				9B79CAC227957D37006EE615 /* InAppSafariViewModel.swift in Sources */,
 				9BED4B3F27A409EE003710EC /* InAppSafariView.swift in Sources */,

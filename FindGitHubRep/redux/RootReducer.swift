@@ -21,15 +21,15 @@ struct RootReducer: Reducer {
             nextRepository = RepositoryReducer.reduce(state: state.repository, with: action)
         }
         
-        var nextSafariView = state.safariView
-        if action is SafariViewAction {
-            nextSafariView = SafariViewReducer.reduce(state: state.safariView, with: action)
+        var nextInAppSafariView = state.inAppSafariView
+        if action is InAppSafariViewAction {
+            nextInAppSafariView = InAppSafariViewReducer.reduce(state: state.inAppSafariView, with: action)
         }
         
         return RootState(
           counter: nextCounter,
           repository: nextRepository,
-          safariView: nextSafariView
+          inAppSafariView: nextInAppSafariView
         )
     }
 }

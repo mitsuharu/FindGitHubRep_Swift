@@ -17,11 +17,11 @@ struct InAppSafariView: View {
     
     var body: some View {
         VStack {
-        }.safariView(item: $viewModel.resource, onDismiss: {
+        }.safariView(item: $viewModel.item, onDismiss: {
             viewModel.dissmiss()
-        }) { rep in
+        }) { item in
             SafariView(
-                url: URL(string: rep.url)!,
+                url: URL(string: item.url)!,
                 configuration: SafariView.Configuration(
                     entersReaderIfAvailable: false,
                     barCollapsingEnabled: true
