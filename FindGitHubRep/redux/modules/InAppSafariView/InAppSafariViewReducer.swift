@@ -7,7 +7,6 @@
 
 import Foundation
 import ReMVVMSwiftUI
-import CryptoKit
 
 enum InAppSafariViewReducer: Reducer {
     static func reduce(state: InAppSafariViewState,

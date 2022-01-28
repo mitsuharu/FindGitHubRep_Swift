@@ -26,10 +26,16 @@ struct RootReducer: Reducer {
             nextInAppSafariView = InAppSafariViewReducer.reduce(state: state.inAppSafariView, with: action)
         }
         
+        var nextToast= state.toast
+        if action is ToastAction {
+            nextToast = ToastReducer.reduce(state: state.toast, with: action)
+        }
+        
         return RootState(
           counter: nextCounter,
           repository: nextRepository,
-          inAppSafariView: nextInAppSafariView
+          inAppSafariView: nextInAppSafariView,
+          toast: nextToast,
         )
     }
 }
