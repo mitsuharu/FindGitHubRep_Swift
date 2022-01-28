@@ -19,6 +19,7 @@ struct FindGitHubRepApp: App {
         WindowGroup {
             SearchRepositoryListView()
             InAppSafariView()
+            Toast()
         }
     }
 }

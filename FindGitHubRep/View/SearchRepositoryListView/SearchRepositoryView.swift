@@ -13,7 +13,7 @@ struct SearchRepositoryListView: View {
 
     @State private var searchText: String = ""
     @ReMVVM.ViewModel private var viewModel: SearchRepositoryViewModel!
-    
+        
     var body: some View {
         NavigationView{
             List{
@@ -23,6 +23,7 @@ struct SearchRepositoryListView: View {
                 } else{
                     ForEach(viewModel.items){ item in
                         Button {
+//                            viewModel.enqueueToast(message: item.url, type: nil)
                             viewModel.openInAppSafariView(url: item.url)
                         } label: {
                             RepositoryItem(repository: item).onAppear {

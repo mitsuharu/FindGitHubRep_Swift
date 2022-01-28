@@ -49,6 +49,13 @@
 		9BDBD1892753718D008DB20C /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBD1882753718D008DB20C /* Repository.swift */; };
 		9BDBD18C27537A76008DB20C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BDBD18B27537A76008DB20C /* Preview Assets.xcassets */; };
 		9BED4B3F27A409EE003710EC /* InAppSafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED4B3E27A409EE003710EC /* InAppSafariView.swift */; };
+		9BED4B4227A42058003710EC /* ToastState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED4B4127A42058003710EC /* ToastState.swift */; };
+		9BED4B4427A42146003710EC /* ToastAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED4B4327A42146003710EC /* ToastAction.swift */; };
+		9BED4B4627A421AD003710EC /* ToastReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED4B4527A421AD003710EC /* ToastReducer.swift */; };
+		9BED4B4827A425A0003710EC /* ToastSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED4B4727A425A0003710EC /* ToastSelectors.swift */; };
+		9BED4B4B27A426DC003710EC /* ToastUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9BED4B4A27A426DC003710EC /* ToastUI */; };
+		9BED4B4E27A42721003710EC /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED4B4D27A42721003710EC /* Toast.swift */; };
+		9BED4B5027A42730003710EC /* ToastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED4B4F27A42730003710EC /* ToastViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +115,12 @@
 		9BDBD1882753718D008DB20C /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		9BDBD18B27537A76008DB20C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9BED4B3E27A409EE003710EC /* InAppSafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppSafariView.swift; sourceTree = "<group>"; };
+		9BED4B4127A42058003710EC /* ToastState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastState.swift; sourceTree = "<group>"; };
+		9BED4B4327A42146003710EC /* ToastAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastAction.swift; sourceTree = "<group>"; };
+		9BED4B4527A421AD003710EC /* ToastReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastReducer.swift; sourceTree = "<group>"; };
+		9BED4B4727A425A0003710EC /* ToastSelectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastSelectors.swift; sourceTree = "<group>"; };
+		9BED4B4D27A42721003710EC /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		9BED4B4F27A42730003710EC /* ToastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +134,7 @@
 				96B2C9CE2769A9530073DB41 /* BetterSafariView in Frameworks */,
 				9B79CAAF2795782D006EE615 /* Alamofire in Frameworks */,
 				9B79CAB227957869006EE615 /* AlamofireImage in Frameworks */,
+				9BED4B4B27A426DC003710EC /* ToastUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +244,7 @@
 		968F9D32275074CD0065F9D1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9BED4B4C27A42715003710EC /* ToastView */,
 				9BED4B3D27A409E4003710EC /* InAppSafariView */,
 				96B123A2276974A90075DF2E /* SearchRepositoryListView */,
 				968F9D4E275076C40065F9D1 /* CounterView.swift */,
@@ -243,6 +258,7 @@
 				968F9D4C275076200065F9D1 /* CounterViewModel.swift */,
 				96BA1DFA275DE3EE006E3678 /* SearchRepositoryViewModel.swift */,
 				9B79CAC127957D37006EE615 /* InAppSafariViewModel.swift */,
+				9BED4B4F27A42730003710EC /* ToastViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -261,6 +277,7 @@
 		968F9D672750831C0065F9D1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				9BED4B4027A42049003710EC /* Toast */,
 				9B79CAB82795791E006EE615 /* InAppSafariView */,
 				96BA1DFC275DE6BA006E3678 /* Repository */,
 				968F9D682750831C0065F9D1 /* Counter */,
@@ -347,6 +364,26 @@
 			path = InAppSafariView;
 			sourceTree = "<group>";
 		};
+		9BED4B4027A42049003710EC /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				9BED4B4127A42058003710EC /* ToastState.swift */,
+				9BED4B4327A42146003710EC /* ToastAction.swift */,
+				9BED4B4527A421AD003710EC /* ToastReducer.swift */,
+				9BED4B4727A425A0003710EC /* ToastSelectors.swift */,
+			);
+			name = Toast;
+			path = FindGitHubRep/redux/modules/Toast;
+			sourceTree = SOURCE_ROOT;
+		};
+		9BED4B4C27A42715003710EC /* ToastView */ = {
+			isa = PBXGroup;
+			children = (
+				9BED4B4D27A42721003710EC /* Toast.swift */,
+			);
+			path = ToastView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -370,6 +407,7 @@
 				9B79CAB127957869006EE615 /* AlamofireImage */,
 				9B79CAB42795789C006EE615 /* ReMVVMCore */,
 				9B79CAB62795789C006EE615 /* ReMVVMSwiftUI */,
+				9BED4B4A27A426DC003710EC /* ToastUI */,
 			);
 			productName = FindGitHubRep;
 			productReference = 9672883C274DF79000454CC0 /* FindGitHubRep.app */;
@@ -449,6 +487,7 @@
 				9B79CAAD2795782D006EE615 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				9B79CAB027957869006EE615 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 				9B79CAB32795789C006EE615 /* XCRemoteSwiftPackageReference "ReMVVM" */,
+				9BED4B4927A426DC003710EC /* XCRemoteSwiftPackageReference "ToastUI" */,
 			);
 			productRefGroup = 9672883D274DF79000454CC0 /* Products */;
 			projectDirPath = "";
@@ -493,6 +532,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BED4B4627A421AD003710EC /* ToastReducer.swift in Sources */,
 				9BDBD17C275355FA008DB20C /* API.swift in Sources */,
 				96BA1E04275DE6BA006E3678 /* RepActions.swift in Sources */,
 				96B123AD2769849A0075DF2E /* RemoteImageView.swift in Sources */,
@@ -502,6 +542,8 @@
 				9B79CABF2795791E006EE615 /* InAppSafariViewReducer.swift in Sources */,
 				96BA1DFB275DE3EE006E3678 /* SearchRepositoryViewModel.swift in Sources */,
 				968F9D712750831C0065F9D1 /* actions.swift in Sources */,
+				9BED4B4827A425A0003710EC /* ToastSelectors.swift in Sources */,
+				9BED4B4427A42146003710EC /* ToastAction.swift in Sources */,
 				96B123A6276974A90075DF2E /* SearchRepositoryView.swift in Sources */,
 				968F9D6D2750831C0065F9D1 /* RootState.swift in Sources */,
 				968F9D74275083400065F9D1 /* selectors.swift in Sources */,
@@ -512,12 +554,15 @@
 				968F9D4F275076C40065F9D1 /* CounterView.swift in Sources */,
 				96BA1E03275DE6BA006E3678 /* RepReducers.swift in Sources */,
 				96B123A5276974A90075DF2E /* RepositoryItem.swift in Sources */,
+				9BED4B5027A42730003710EC /* ToastViewModel.swift in Sources */,
+				9BED4B4227A42058003710EC /* ToastState.swift in Sources */,
 				96BA1E02275DE6BA006E3678 /* Repselectors.swift in Sources */,
 				968F9D702750831C0065F9D1 /* reducers.swift in Sources */,
 				9BDBD18727536FE7008DB20C /* SearchRepositoryResult.swift in Sources */,
 				968F9D6C2750831C0065F9D1 /* InitializeRedux.swift in Sources */,
 				96B1238E27696E360075DF2E /* GitHubApi+Debug.swift in Sources */,
 				968F9D6E2750831C0065F9D1 /* RootReducer.swift in Sources */,
+				9BED4B4E27A42721003710EC /* Toast.swift in Sources */,
 				968F9D6F2750831C0065F9D1 /* state.swift in Sources */,
 				9B79CABE2795791E006EE615 /* InAppSafariViewSelectors.swift in Sources */,
 				96B123AB2769777C0075DF2E /* User.swift in Sources */,
@@ -913,6 +958,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		9BED4B4927A426DC003710EC /* XCRemoteSwiftPackageReference "ToastUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/quanshousio/ToastUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -945,6 +998,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9B79CAB32795789C006EE615 /* XCRemoteSwiftPackageReference "ReMVVM" */;
 			productName = ReMVVMSwiftUI;
+		};
+		9BED4B4A27A426DC003710EC /* ToastUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9BED4B4927A426DC003710EC /* XCRemoteSwiftPackageReference "ToastUI" */;
+			productName = ToastUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
