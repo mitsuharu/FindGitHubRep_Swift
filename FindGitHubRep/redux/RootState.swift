@@ -18,7 +18,7 @@ struct RootState: StoreState {
       return RootState(
           counter: CounterState.initialState(),
           repository: RepositoryState.initialState(),
-          inAppSafariView: InAppSafariViewState.initialState()
+          inAppSafariView: InAppSafariViewState.initialState(),
           toast: ToastState.initialState()
       )
     }

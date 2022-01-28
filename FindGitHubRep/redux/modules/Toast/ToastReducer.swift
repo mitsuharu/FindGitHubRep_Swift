@@ -18,7 +18,7 @@ enum ToastReducer: Reducer {
           return ToastState(items: state.items + [item])
     
       case .dequeueToast(id: let id):
-          let next = state.items.filter { $0.id != id}
+          let next = state.items.filter { $0.id != id }
           return ToastState(items: next)
           
       case .clearToast:

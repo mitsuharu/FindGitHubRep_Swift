@@ -79,4 +79,8 @@ final class SearchRepositoryViewModel: ObservableObject, Initializable {
     func dissmissInAppSafariView(){
         dispatcher[InAppSafariViewAction.dismiss]()
     }
+    
+    public func enqueueToast(message :String, type: ToastType?)  {
+        dispatcher[ToastAction.enqueueToast(message: message, type: type)]()
+    }
 }

@@ -14,7 +14,7 @@ enum ToastType {
     case error
 }
 
-struct ToastItem: Identifiable {
+struct ToastItem: Identifiable, Equatable {
     let id: Int
     let message: String
     let type: ToastType
