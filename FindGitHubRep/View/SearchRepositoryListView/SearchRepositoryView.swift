@@ -23,7 +23,7 @@ struct SearchRepositoryListView: View {
                 } else{
                     ForEach(viewModel.items){ item in
                         Button {
-//                            viewModel.enqueueToast(message: item.url, type: nil)
+                            viewModel.enqueueToast(message: item.url, type: nil)
                             viewModel.openInAppSafariView(url: item.url)
                         } label: {
                             RepositoryItem(repository: item).onAppear {
@@ -43,7 +43,7 @@ struct SearchRepositoryListView: View {
             ).onChange(of: searchText) { newValue in
                 viewModel.requestRepositories(keyword: newValue)
             }
-        }
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

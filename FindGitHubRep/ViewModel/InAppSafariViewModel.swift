@@ -26,7 +26,7 @@ final class InAppSafariViewModel: ObservableObject, Initializable {
         dispatcher[InAppSafariViewAction.show(url: url)]()
     }
   
-    func dissmiss(){
+    public func dissmiss(){
         dispatcher[InAppSafariViewAction.dismiss]()
     }
 }
