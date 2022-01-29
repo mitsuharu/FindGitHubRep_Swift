@@ -21,9 +21,21 @@ struct RootReducer: Reducer {
             nextRepository = RepositoryReducer.reduce(state: state.repository, with: action)
         }
         
+        var nextInAppSafariView = state.inAppSafariView
+        if action is InAppSafariViewAction {
+            nextInAppSafariView = InAppSafariViewReducer.reduce(state: state.inAppSafariView, with: action)
+        }
+        
+        var nextToast = state.toast
+        if action is ToastAction {
+            nextToast = ToastReducer.reduce(state: state.toast, with: action)
+        }
+        
         return RootState(
           counter: nextCounter,
-          repository: nextRepository
+          repository: nextRepository,
+          inAppSafariView: nextInAppSafariView,
+          toast: nextToast
         )
     }
 }

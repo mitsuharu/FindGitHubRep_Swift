@@ -13,12 +13,13 @@ public let logger = Logger(label: "com.example.find.github.rep")
 @main
 struct FindGitHubRepApp: App {
   
-  let store = initializeRedux()
-  
+    let store = initializeRedux()
+
     var body: some Scene {
         WindowGroup {
-            SearchRepositoryListView().source(with: store)
-//          CounterView().source(with: store)
+            SearchRepositoryListView()
+            InAppSafariView()
+            Toast()
         }
     }
 }

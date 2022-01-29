@@ -70,5 +70,13 @@ final class SearchRepositoryViewModel: ObservableObject, Initializable {
                 self.dispatcher[RepositoryAction.failed(error)]()
             }
         }
-    }  
+    }
+    
+    public func openInAppSafariView(url :String)  {
+        dispatcher[InAppSafariViewAction.show(url: url)]()
+    }
+      
+    public func enqueueToast(message :String, type: ToastType?)  {
+        dispatcher[ToastAction.enqueueToast(message: message, type: type)]()
+    }
 }
