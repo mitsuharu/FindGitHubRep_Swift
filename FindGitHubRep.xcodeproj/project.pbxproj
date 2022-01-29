@@ -56,6 +56,8 @@
 		9BED4B4B27A426DC003710EC /* ToastUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9BED4B4A27A426DC003710EC /* ToastUI */; };
 		9BED4B4E27A42721003710EC /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED4B4D27A42721003710EC /* Toast.swift */; };
 		9BED4B5027A42730003710EC /* ToastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED4B4F27A42730003710EC /* ToastViewModel.swift */; };
+		9BED4B6027A508AD003710EC /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED4B5F27A508AD003710EC /* Toast.swift */; };
+		9BED4B6227A54895003710EC /* InAppSafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED4B6127A54895003710EC /* InAppSafariView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +123,8 @@
 		9BED4B4727A425A0003710EC /* ToastSelectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastSelectors.swift; sourceTree = "<group>"; };
 		9BED4B4D27A42721003710EC /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		9BED4B4F27A42730003710EC /* ToastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewModel.swift; sourceTree = "<group>"; };
+		9BED4B5F27A508AD003710EC /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		9BED4B6127A54895003710EC /* InAppSafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppSafariView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +199,7 @@
 		9672884F274DF79300454CC0 /* FindGitHubRepTests */ = {
 			isa = PBXGroup;
 			children = (
+				9BED4B5E27A5087C003710EC /* redux */,
 				96B123A7276975A30075DF2E /* json */,
 				96728850274DF79300454CC0 /* FindGitHubRepTests.swift */,
 			);
@@ -382,6 +387,15 @@
 				9BED4B4D27A42721003710EC /* Toast.swift */,
 			);
 			path = ToastView;
+			sourceTree = "<group>";
+		};
+		9BED4B5E27A5087C003710EC /* redux */ = {
+			isa = PBXGroup;
+			children = (
+				9BED4B5F27A508AD003710EC /* Toast.swift */,
+				9BED4B6127A54895003710EC /* InAppSafariView.swift */,
+			);
+			path = redux;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -576,6 +590,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				96728851274DF79300454CC0 /* FindGitHubRepTests.swift in Sources */,
+				9BED4B6027A508AD003710EC /* Toast.swift in Sources */,
+				9BED4B6227A54895003710EC /* InAppSafariView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
