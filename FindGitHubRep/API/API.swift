@@ -11,7 +11,11 @@ import Alamofire
 class API {
 
     func delay(sec: Double) async {
-        await Task.sleep(UInt64(sec) * 1_000_000_000)
+        do {
+            try await Task.sleep(nanoseconds: UInt64(sec) * 1_000_000_000)
+        } catch {
+            logger.warning("API#delay error: \(error)")
+        }
     }
 
     /**
@@ -21,7 +25,7 @@ class API {
      see: https://docs.github.com/en/rest/reference/search#search-repositories
      */
     func searchRepositories(keyword: String, page: Int = 1) async throws -> SearchRepositoryResult {
-        return try await withCheckedThrowingContinuation({ continuation in
+        try await withCheckedThrowingContinuation({ continuation in
             AF.request(GitHubApiParams.urlSearchRepositories,
                        method: .get,
                        parameters: GitHubApiParams.parameters(keyword: keyword, page: page),
@@ -46,7 +50,7 @@ class API {
                             continuation.resume(throwing: error)
                             return
                         }
-                       }
+            }
         })
     }
 }

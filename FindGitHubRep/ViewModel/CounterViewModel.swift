@@ -13,7 +13,7 @@ final class CounterViewModel: ObservableObject, Initializable {
     @ReMVVM.State<RootState> private var state
     @ReMVVM.Dispatcher private var dispatcher
 
-    var api: API = API()
+    var api = API()
 
     required init() {
         $state.map(selectCount).assign(to: &$count)
@@ -22,14 +22,14 @@ final class CounterViewModel: ObservableObject, Initializable {
     public func increase() {
         dispatcher[CounterAction.increase]()
 
-        // sample
-        Task {
-            do {
-                try await searchRepositories()
-            } catch {
-                debugPrint(error)
-            }
-        }
+        //        // sample
+        //        Task {
+        //            do {
+        //                try await searchRepositories()
+        //            } catch {
+        //                debugPrint(error)
+        //            }
+        //        }
     }
 
     func decrease() {
