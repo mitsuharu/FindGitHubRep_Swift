@@ -13,15 +13,15 @@ struct SearchRepositoryListView: View {
 
     @State private var searchText: String = ""
     @ReMVVM.ViewModel private var viewModel: SearchRepositoryViewModel!
-        
+
     var body: some View {
-        NavigationView{
-            List{
+        NavigationView {
+            List {
                 if viewModel.items.count == 0 && viewModel.isRequesting {
                     ProgressView()
                         .frame(idealWidth: .infinity, maxWidth: .infinity, alignment: .center)
-                } else{
-                    ForEach(viewModel.items){ item in
+                } else {
+                    ForEach(viewModel.items) { item in
                         Button {
                             viewModel.enqueueToast(message: item.url, type: nil)
                             viewModel.openInAppSafariView(url: item.url)

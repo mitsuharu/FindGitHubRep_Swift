@@ -12,9 +12,9 @@ import BetterSafariView
 /// InAppSafariView を表示する
 /// root あたりに設定する
 struct InAppSafariView: View {
-    
+
     @ReMVVM.ViewModel private var viewModel: InAppSafariViewModel!
-    
+
     var body: some View {
         VStack {
         }.safariView(item: $viewModel.item, onDismiss: {
@@ -27,9 +27,9 @@ struct InAppSafariView: View {
                     barCollapsingEnabled: true
                 )
             )
-                .preferredBarAccentColor(.clear)
-                .preferredControlAccentColor(.accentColor)
-                .dismissButtonStyle(.close)
+            .preferredBarAccentColor(.clear)
+            .preferredControlAccentColor(.accentColor)
+            .dismissButtonStyle(.close)
         }
     }
 }

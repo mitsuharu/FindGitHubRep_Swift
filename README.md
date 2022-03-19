@@ -6,7 +6,7 @@ FindGitHubRep_Swift
 
 ## 目的
 
-- APIで情報取得してリスト表示するといった、アプリの基本機能を他の言語ではどう書くのだろうか、と思った練習用アプリです。
+- APIで情報取得してリスト表示するといった、アプリの基本機能を他の言語ではどう書くのだろうか、と思った iOS / Swift 練習用アプリです。
 - GitHubのレポジトリ検索は、制約があるが、認証なしで使えるので、token 管理などが不要なため選択した。
 
 
@@ -18,7 +18,14 @@ FindGitHubRep_Swift
 
 - SwiftUI
   - 宣言型UI 	が好きだから
-  - iOS 15 から使い物になった 
+  - iOS 15 から使い物になった印象
 - [ReMVVM](https://github.com/ReMVVM/ReMVVM)
   - Redux が好きだから 
-  - Redux + MVVM 
+  - Redux + MVVM
+
+
+### その他
+
+- SwiftLint
+	- `% brew install swiftlint`
+	- ビルド時に変更ファイルに自動適用（on save 時にやりたい）

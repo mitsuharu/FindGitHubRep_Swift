@@ -9,13 +9,13 @@ import Foundation
 import ReMVVMSwiftUI
 
 func initializeRedux() -> Store<RootState> {
-  
+
     let initialState: RootState = RootState.initialState()
-    
+
     let middleware: [AnyMiddleware] = []
-    
+
     let stateMappers: [StateMapper<RootState>] = [
-      StateMapper(for: \.counter.count),
+        StateMapper(for: \.counter.count)
     ]
 
     let store: Store<RootState> = Store(with: initialState,
@@ -23,6 +23,6 @@ func initializeRedux() -> Store<RootState> {
                                         middleware: middleware,
                                         stateMappers: stateMappers)
     ReMVVM.initialize(with: store)
-    
+
     return store
 }

@@ -10,13 +10,13 @@ import ReMVVMSwiftUI
 
 enum CounterReducer: Reducer {
     static func reduce(state: CounterState, with action: CounterAction) -> CounterState {
-      switch action {
+        switch action {
         case .increase:
-          return CounterState(count: state.count + 1)
+            return CounterState(count: state.count + 1)
         case .decrease:
-          return  CounterState(count: state.count - 1)
+            return  CounterState(count: state.count - 1)
         case .assign(value: let value):
-          return  CounterState(count: value)
-      }
+            return  CounterState(count: value)
+        }
     }
 }
