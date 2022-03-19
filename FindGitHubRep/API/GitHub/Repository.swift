@@ -8,7 +8,7 @@
 import Foundation
 
 struct Repository: Codable, Identifiable {
-    
+
     let id: Int
     let name: String
     let fullName: String
@@ -18,7 +18,7 @@ struct Repository: Codable, Identifiable {
     let stars: Int
     let watchers: Int
     let topics: [String]
-    
+
     enum CodingKeys: String, CodingKey {
         case id
         case name
@@ -31,4 +31,3 @@ struct Repository: Codable, Identifiable {
         case topics
     }
 }
-

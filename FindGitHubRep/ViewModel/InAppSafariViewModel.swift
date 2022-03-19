@@ -13,20 +13,20 @@ final class InAppSafariViewModel: ObservableObject, Initializable {
 
     // BetterSafariView が書き込むので private(set) は不要
     // ただし、BetterSafariView#onDismiss で InAppSafariViewModel#dissmiss を呼ぶ必要あり
-    @Published var item: InAppSafariViewItem? = nil
-    
+    @Published var item: InAppSafariViewItem?
+
     @ReMVVM.State<RootState> private var state
     @ReMVVM.Dispatcher private var dispatcher
-        
+
     required init() {
         $state.map(selectInAppSafariViewItem).assign(to: &$item)
     }
-  
-    public func show(url :String)  {
+
+    public func show(url: String) {
         dispatcher[InAppSafariViewAction.show(url: url)]()
     }
-  
-    public func dissmiss(){
+
+    public func dissmiss() {
         dispatcher[InAppSafariViewAction.dismiss]()
     }
 }

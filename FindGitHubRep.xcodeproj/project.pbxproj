@@ -408,6 +408,7 @@
 				96728838274DF79000454CC0 /* Sources */,
 				96728839274DF79000454CC0 /* Frameworks */,
 				9672883A274DF79000454CC0 /* Resources */,
+				9B1CA97827E55878000B4072 /* run SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -540,6 +541,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9B1CA97827E55878000B4072 /* run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  git diff --name-only | grep .swift | while read filename; do\n      swiftlint --fix --format --path \"$filename\"\n  done\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		96728838274DF79000454CC0 /* Sources */ = {
@@ -744,7 +766,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FindGitHubRep/Preview Content\"";
-				DEVELOPMENT_TEAM = 258G37N9BU;
+				DEVELOPMENT_TEAM = PL856FN8YQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -758,6 +780,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "-Xfrontend -warn-concurrency";
 				PRODUCT_BUNDLE_IDENTIFIER = net.mituwa.FindGitHubRep;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -774,7 +797,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FindGitHubRep/Preview Content\"";
-				DEVELOPMENT_TEAM = 258G37N9BU;
+				DEVELOPMENT_TEAM = PL856FN8YQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -788,6 +811,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "-Xfrontend -warn-concurrency";
 				PRODUCT_BUNDLE_IDENTIFIER = net.mituwa.FindGitHubRep;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

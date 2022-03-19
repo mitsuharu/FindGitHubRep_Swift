@@ -7,6 +7,6 @@
 
 import Foundation
 
-func selectCount(store:RootState) -> Int {
-  return store.counter.count
+func selectCount(store: RootState) -> Int {
+    return store.counter.count
 }

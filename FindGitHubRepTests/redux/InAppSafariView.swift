@@ -25,7 +25,7 @@ class InAppSafariView: XCTestCase {
                                                       with: .show(url: url))
         XCTAssertEqual(nextState.item?.url, url)
     }
-    
+
     func testDismiss() throws {
         let url = "https://example.com/"
         let item: InAppSafariViewItem = InAppSafariViewItem(id: 1234, url: url)

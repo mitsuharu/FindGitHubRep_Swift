@@ -27,11 +27,10 @@ func selectRepositoryHasNext(store: RootState) -> Bool {
     return store.repository.hasNext
 }
 
-func selectRepositoryItems(store: RootState) -> Array<Repository> {
+func selectRepositoryItems(store: RootState) -> [Repository] {
     return store.repository.items
 }
 
 func selectRepositoryError(store: RootState) -> Error? {
     return store.repository.error
 }
-

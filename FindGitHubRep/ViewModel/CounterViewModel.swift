@@ -12,34 +12,34 @@ final class CounterViewModel: ObservableObject, Initializable {
     @Published private(set) var count: Int = 0
     @ReMVVM.State<RootState> private var state
     @ReMVVM.Dispatcher private var dispatcher
-    
-    var api: API = API()
-  
+
+    var api = API()
+
     required init() {
         $state.map(selectCount).assign(to: &$count)
     }
-  
-    public func increase()  {
+
+    public func increase() {
         dispatcher[CounterAction.increase]()
-      
-        // sample
-        Task {
-            do{
-               try await searchRepositories()
-            }catch{
-                debugPrint(error)
-            }
-        }
+
+        //        // sample
+        //        Task {
+        //            do {
+        //                try await searchRepositories()
+        //            } catch {
+        //                debugPrint(error)
+        //            }
+        //        }
     }
-  
-    func decrease(){
+
+    func decrease() {
         dispatcher[CounterAction.decrease]()
     }
-    
-    func searchRepositories()  async throws -> SearchRepositoryResult{
+
+    func searchRepositories()  async throws -> SearchRepositoryResult {
         let result: SearchRepositoryResult = try await api.searchRepositories(keyword: "swift")
         debugPrint("searchRepositories: total: \(result.total)")
         return result
     }
-  
+
 }
