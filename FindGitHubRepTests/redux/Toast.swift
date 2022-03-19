@@ -17,7 +17,7 @@ class Toast: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-    
+
     func testReducerEnqueueToast() throws {
         let state: ToastState = ToastState(items: [])
         let message = "test_message"
@@ -26,7 +26,7 @@ class Toast: XCTestCase {
         XCTAssertEqual(nextState.items.count, state.items.count + 1)
         XCTAssertEqual(nextState.items.last?.message, message)
     }
-    
+
     func testReducerDequeueToast() throws {
         let itemId = 1234
         let item: ToastItem = ToastItem(id: itemId, message: "test", type: .info)
@@ -34,13 +34,13 @@ class Toast: XCTestCase {
         let nextState = ToastReducer.reduce(state: state,
                                             with: .dequeueToast(id: itemId))
         XCTAssertEqual(nextState.items.count, state.items.count - 1)
-        
+
         let nextItem: ToastItem? = nextState.items.first { it in
             it.id == itemId
         }
         XCTAssertNil(nextItem)
     }
-    
+
     func testReducerClearToast() throws {
         let item: ToastItem = ToastItem(id: 1234, message: "test", type: .info)
         let state: ToastState = ToastState(items: [item])

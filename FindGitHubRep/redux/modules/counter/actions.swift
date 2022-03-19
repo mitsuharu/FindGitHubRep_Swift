@@ -9,7 +9,7 @@ import Foundation
 import ReMVVMSwiftUI
 
 enum CounterAction: StoreAction {
-  case increase
-  case decrease
-  case assign(value: Int)
+    case increase
+    case decrease
+    case assign(value: Int)
 }

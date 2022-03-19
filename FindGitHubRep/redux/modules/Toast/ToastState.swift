@@ -22,7 +22,7 @@ struct ToastItem: Identifiable, Equatable {
 
 struct ToastState: StoreState {
     let items: [ToastItem]
-    static func initialState() -> ToastState{
+    static func initialState() -> ToastState {
         return ToastState(items: [])
     }
 }

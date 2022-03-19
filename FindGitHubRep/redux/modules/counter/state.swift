@@ -9,10 +9,10 @@ import Foundation
 import ReMVVMSwiftUI
 
 struct CounterState: StoreState {
-    
-  let count: Int
-  
-  static func initialState() -> CounterState{
-    return CounterState(count: 0)
-  }
+
+    let count: Int
+
+    static func initialState() -> CounterState {
+        return CounterState(count: 0)
+    }
 }

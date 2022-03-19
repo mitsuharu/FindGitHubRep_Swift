@@ -14,10 +14,10 @@ struct InAppSafariViewItem: Identifiable {
 }
 
 struct InAppSafariViewState: StoreState {
-    
-  let item: InAppSafariViewItem?
-  
-  static func initialState() -> InAppSafariViewState{
-    return InAppSafariViewState(item: nil)
-  }
+
+    let item: InAppSafariViewItem?
+
+    static func initialState() -> InAppSafariViewState {
+        return InAppSafariViewState(item: nil)
+    }
 }
