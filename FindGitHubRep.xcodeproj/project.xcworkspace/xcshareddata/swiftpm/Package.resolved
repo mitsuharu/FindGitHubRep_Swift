@@ -1,61 +1,59 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "Alamofire",
-        "repositoryURL": "https://github.com/Alamofire/Alamofire",
-        "state": {
-          "branch": null,
-          "revision": "f82c23a8a7ef8dc1a49a8bfc6a96883e79121864",
-          "version": "5.5.0"
-        }
-      },
-      {
-        "package": "AlamofireImage",
-        "repositoryURL": "https://github.com/Alamofire/AlamofireImage",
-        "state": {
-          "branch": null,
-          "revision": "98cbb00ce0ec5fc8e52a5b50a6bfc08d3e5aee10",
-          "version": "4.2.0"
-        }
-      },
-      {
-        "package": "BetterSafariView",
-        "repositoryURL": "https://github.com/stleamist/BetterSafariView",
-        "state": {
-          "branch": null,
-          "revision": "be7248720af18c57c7a1348b20f6212379b28c6b",
-          "version": "2.4.0"
-        }
-      },
-      {
-        "package": "ReMVVM",
-        "repositoryURL": "https://github.com/ReMVVM/ReMVVM",
-        "state": {
-          "branch": null,
-          "revision": "06447046511361dec81c718ecea2427a61a65f4d",
-          "version": "3.0.0"
-        }
-      },
-      {
-        "package": "swift-log",
-        "repositoryURL": "https://github.com/apple/swift-log",
-        "state": {
-          "branch": null,
-          "revision": "5d66f7ba25daf4f94100e7022febf3c75e37a6c7",
-          "version": "1.4.2"
-        }
-      },
-      {
-        "package": "ToastUI",
-        "repositoryURL": "https://github.com/quanshousio/ToastUI",
-        "state": {
-          "branch": null,
-          "revision": "e1fd43336630b40a4273a346bd9e6c250151c88d",
-          "version": "2.0.0"
-        }
-      }
-    ]
-  },
-  "version": 1
+    "pins" : [
+    {
+    "identity" : "alamofire",
+    "kind" : "remoteSourceControl",
+    "location" : "https://github.com/Alamofire/Alamofire",
+    "state" : {
+    "revision" : "f82c23a8a7ef8dc1a49a8bfc6a96883e79121864",
+    "version" : "5.5.0"
+    }
+    },
+    {
+    "identity" : "alamofireimage",
+    "kind" : "remoteSourceControl",
+    "location" : "https://github.com/Alamofire/AlamofireImage",
+    "state" : {
+    "revision" : "98cbb00ce0ec5fc8e52a5b50a6bfc08d3e5aee10",
+    "version" : "4.2.0"
+    }
+    },
+    {
+    "identity" : "bettersafariview",
+    "kind" : "remoteSourceControl",
+    "location" : "https://github.com/stleamist/BetterSafariView",
+    "state" : {
+    "revision" : "be7248720af18c57c7a1348b20f6212379b28c6b",
+    "version" : "2.4.0"
+    }
+    },
+    {
+    "identity" : "remvvm",
+    "kind" : "remoteSourceControl",
+    "location" : "https://github.com/ReMVVM/ReMVVM",
+    "state" : {
+    "revision" : "06447046511361dec81c718ecea2427a61a65f4d",
+    "version" : "3.0.0"
+    }
+    },
+    {
+    "identity" : "swift-log",
+    "kind" : "remoteSourceControl",
+    "location" : "https://github.com/apple/swift-log",
+    "state" : {
+    "revision" : "5d66f7ba25daf4f94100e7022febf3c75e37a6c7",
+    "version" : "1.4.2"
+    }
+    },
+    {
+    "identity" : "toastui",
+    "kind" : "remoteSourceControl",
+    "location" : "https://github.com/quanshousio/ToastUI",
+    "state" : {
+    "revision" : "e1fd43336630b40a4273a346bd9e6c250151c88d",
+    "version" : "2.0.0"
+    }
+    }
+    ],
+    "version" : 2
 }

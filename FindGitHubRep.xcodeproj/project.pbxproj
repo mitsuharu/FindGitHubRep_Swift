@@ -33,6 +33,13 @@
 		96BA1E02275DE6BA006E3678 /* Repselectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA1DFE275DE6BA006E3678 /* Repselectors.swift */; };
 		96BA1E03275DE6BA006E3678 /* RepReducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA1DFF275DE6BA006E3678 /* RepReducers.swift */; };
 		96BA1E04275DE6BA006E3678 /* RepActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA1E00275DE6BA006E3678 /* RepActions.swift */; };
+		9B31445027EEAB870069E460 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B31444F27EEAB870069E460 /* DetailView.swift */; };
+		9B31445627EEB0870069E460 /* RouterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B31445527EEB0870069E460 /* RouterState.swift */; };
+		9B31445827EEB6910069E460 /* RouterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B31445727EEB6910069E460 /* RouterAction.swift */; };
+		9B31445A27EEB6D50069E460 /* RouterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B31445927EEB6D50069E460 /* RouterReducer.swift */; };
+		9B31445D27EEBFE30069E460 /* RouterSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B31445C27EEBFE30069E460 /* RouterSelectors.swift */; };
+		9B31445F27EEC1A20069E460 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B31445E27EEC1A20069E460 /* RootViewModel.swift */; };
+		9B31446227EEC2F90069E460 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B31446127EEC2F90069E460 /* RootView.swift */; };
 		9B79CAAC27957798006EE615 /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 9B79CAAB27957798006EE615 /* Logging */; };
 		9B79CAAF2795782D006EE615 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9B79CAAE2795782D006EE615 /* Alamofire */; };
 		9B79CAB227957869006EE615 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9B79CAB127957869006EE615 /* AlamofireImage */; };
@@ -106,6 +113,13 @@
 		96BA1DFE275DE6BA006E3678 /* Repselectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repselectors.swift; sourceTree = "<group>"; };
 		96BA1DFF275DE6BA006E3678 /* RepReducers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepReducers.swift; sourceTree = "<group>"; };
 		96BA1E00275DE6BA006E3678 /* RepActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepActions.swift; sourceTree = "<group>"; };
+		9B31444F27EEAB870069E460 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		9B31445527EEB0870069E460 /* RouterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterState.swift; sourceTree = "<group>"; };
+		9B31445727EEB6910069E460 /* RouterAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterAction.swift; sourceTree = "<group>"; };
+		9B31445927EEB6D50069E460 /* RouterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterReducer.swift; sourceTree = "<group>"; };
+		9B31445C27EEBFE30069E460 /* RouterSelectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterSelectors.swift; sourceTree = "<group>"; };
+		9B31445E27EEC1A20069E460 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		9B31446127EEC2F90069E460 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		9B79CAB92795791E006EE615 /* InAppSafariViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppSafariViewState.swift; sourceTree = "<group>"; };
 		9B79CABA2795791E006EE615 /* InAppSafariViewSelectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppSafariViewSelectors.swift; sourceTree = "<group>"; };
 		9B79CABB2795791E006EE615 /* InAppSafariViewReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppSafariViewReducer.swift; sourceTree = "<group>"; };
@@ -249,6 +263,8 @@
 		968F9D32275074CD0065F9D1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9B31446027EEC2E10069E460 /* RootView */,
+				9B31444E27EEAB650069E460 /* DetailView */,
 				9BED4B4C27A42715003710EC /* ToastView */,
 				9BED4B3D27A409E4003710EC /* InAppSafariView */,
 				96B123A2276974A90075DF2E /* SearchRepositoryListView */,
@@ -264,6 +280,7 @@
 				96BA1DFA275DE3EE006E3678 /* SearchRepositoryViewModel.swift */,
 				9B79CAC127957D37006EE615 /* InAppSafariViewModel.swift */,
 				9BED4B4F27A42730003710EC /* ToastViewModel.swift */,
+				9B31445E27EEC1A20069E460 /* RootViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -282,6 +299,7 @@
 		968F9D672750831C0065F9D1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				9B31445427EEAFE00069E460 /* Router */,
 				9BED4B4027A42049003710EC /* Toast */,
 				9B79CAB82795791E006EE615 /* InAppSafariView */,
 				96BA1DFC275DE6BA006E3678 /* Repository */,
@@ -327,6 +345,34 @@
 				96BA1E00275DE6BA006E3678 /* RepActions.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		9B31444E27EEAB650069E460 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				9B31444F27EEAB870069E460 /* DetailView.swift */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
+		9B31445427EEAFE00069E460 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9B31445527EEB0870069E460 /* RouterState.swift */,
+				9B31445727EEB6910069E460 /* RouterAction.swift */,
+				9B31445927EEB6D50069E460 /* RouterReducer.swift */,
+				9B31445C27EEBFE30069E460 /* RouterSelectors.swift */,
+			);
+			name = Router;
+			path = FindGitHubRep/redux/modules/Router;
+			sourceTree = SOURCE_ROOT;
+		};
+		9B31446027EEC2E10069E460 /* RootView */ = {
+			isa = PBXGroup;
+			children = (
+				9B31446127EEC2F90069E460 /* RootView.swift */,
+			);
+			path = RootView;
 			sourceTree = "<group>";
 		};
 		9B79CAB82795791E006EE615 /* InAppSafariView */ = {
@@ -577,6 +623,7 @@
 				9B79CAC02795791E006EE615 /* InAppSafariViewAction.swift in Sources */,
 				9B79CABF2795791E006EE615 /* InAppSafariViewReducer.swift in Sources */,
 				96BA1DFB275DE3EE006E3678 /* SearchRepositoryViewModel.swift in Sources */,
+				9B31445A27EEB6D50069E460 /* RouterReducer.swift in Sources */,
 				968F9D712750831C0065F9D1 /* actions.swift in Sources */,
 				9BED4B4827A425A0003710EC /* ToastSelectors.swift in Sources */,
 				9BED4B4427A42146003710EC /* ToastAction.swift in Sources */,
@@ -587,22 +634,28 @@
 				9BDBD18527536FCE008DB20C /* GitHubApiParams.swift in Sources */,
 				9B79CABD2795791E006EE615 /* InAppSafariViewState.swift in Sources */,
 				96728840274DF79000454CC0 /* FindGitHubRepApp.swift in Sources */,
+				9B31446227EEC2F90069E460 /* RootView.swift in Sources */,
 				968F9D4F275076C40065F9D1 /* CounterView.swift in Sources */,
+				9B31445627EEB0870069E460 /* RouterState.swift in Sources */,
+				9B31445F27EEC1A20069E460 /* RootViewModel.swift in Sources */,
 				96BA1E03275DE6BA006E3678 /* RepReducers.swift in Sources */,
 				96B123A5276974A90075DF2E /* RepositoryItem.swift in Sources */,
 				9BED4B5027A42730003710EC /* ToastViewModel.swift in Sources */,
 				9BED4B4227A42058003710EC /* ToastState.swift in Sources */,
 				96BA1E02275DE6BA006E3678 /* Repselectors.swift in Sources */,
+				9B31445027EEAB870069E460 /* DetailView.swift in Sources */,
 				968F9D702750831C0065F9D1 /* reducers.swift in Sources */,
 				9BDBD18727536FE7008DB20C /* SearchRepositoryResult.swift in Sources */,
 				968F9D6C2750831C0065F9D1 /* InitializeRedux.swift in Sources */,
 				96B1238E27696E360075DF2E /* GitHubApi+Debug.swift in Sources */,
 				968F9D6E2750831C0065F9D1 /* RootReducer.swift in Sources */,
+				9B31445827EEB6910069E460 /* RouterAction.swift in Sources */,
 				9BED4B4E27A42721003710EC /* Toast.swift in Sources */,
 				968F9D6F2750831C0065F9D1 /* state.swift in Sources */,
 				9B79CABE2795791E006EE615 /* InAppSafariViewSelectors.swift in Sources */,
 				96B123AB2769777C0075DF2E /* User.swift in Sources */,
 				9B79CAC227957D37006EE615 /* InAppSafariViewModel.swift in Sources */,
+				9B31445D27EEBFE30069E460 /* RouterSelectors.swift in Sources */,
 				9BED4B3F27A409EE003710EC /* InAppSafariView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
