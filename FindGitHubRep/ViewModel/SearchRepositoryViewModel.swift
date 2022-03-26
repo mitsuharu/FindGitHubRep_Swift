@@ -7,8 +7,9 @@
 
 import Foundation
 import ReMVVMSwiftUI
+import SwiftUI
 
-final class SearchRepositoryViewModel: ObservableObject, Initializable {
+final class SearchRepositoryViewModel: ObservableObject, Initializable, Sendable {
     @Published private(set) var isRequesting = false
     @Published private(set) var keyword: String = ""
     @Published private(set) var page: Int = 0
@@ -88,5 +89,9 @@ final class SearchRepositoryViewModel: ObservableObject, Initializable {
 
     public func enqueueToast(message: String, type: ToastType?) {
         dispatcher[ToastAction.enqueueToast(message: message, type: type)]()
+    }
+
+    public func navigate(destination: AnyView?) {
+        dispatcher[RouterAction.navigate(destination: destination)]()
     }
 }
