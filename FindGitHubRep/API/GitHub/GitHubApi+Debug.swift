@@ -31,7 +31,7 @@ extension Repository {
      検証など向けのダミーデータ
      */
     static func Dummy(id: Int) -> Repository {
-        return Repository(
+        Repository(
             id: id,
             name: "dummy-name-" + String(id),
             fullName: "Dummpy Name " + String(id),
@@ -40,7 +40,8 @@ extension Repository {
             owner: User.Dummy(),
             stars: 10,
             watchers: 20,
-            topics: ["dummy-topic-0", "dummy-topic-1"]
+            topics: ["dummy-topic-0", "dummy-topic-1"],
+            defaultBranch: "master"
         )
     }
 
@@ -65,7 +66,7 @@ extension User {
      検証など向けのダミーデータ
      */
     static func Dummy() -> User {
-        return User(
+        User(
             id: 1,
             name: "dummy user name",
             avatarUrl: "https://httpbin.org/image/png",

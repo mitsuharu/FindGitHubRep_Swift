@@ -53,4 +53,59 @@ class API {
             }
         })
     }
+
+    /**
+     https://api.github.com/repos/octocat/hello-world/readme
+     https://docs.github.com/ja/rest/reference/repos#get-a-repository-readme
+     */
+    func requestReadmeDownloadUrl(owner: String, repo: String)  async throws -> String {
+        try await withCheckedThrowingContinuation({ continuation in
+            AF.request(GitHubApiParams.urlReadme(owner: owner, repo: repo),
+                       method: .get,
+                       parameters: nil,
+                       encoding: URLEncoding.default,
+                       headers: GitHubApiParams.headers).responseData { response in
+
+                        print(response.request?.url?.absoluteString ?? "")
+
+                        switch response.result {
+                        case .success(let value):
+                            print("requestReadmeDownloadUrl, success,  value: \(value)")
+                            do {
+                                let result = try JSONDecoder().decode(Readme.self,
+                                                                      from: value)
+                                continuation.resume(returning: result.downloadUrl)
+                            } catch {
+                                logger.warning("requestReadmeDownloadUrl: json, url: \(response.request?.url?.absoluteString ?? ""), value: \(value), error: \(error)")
+                                continuation.resume(throwing: error)
+                            }
+                            return
+                        case .failure(let error):
+                            logger.warning("requestReadmeDownloadUrl:api, url: \(response.request?.url?.absoluteString ?? ""), error:\(error)")
+                            continuation.resume(throwing: error)
+                            return
+                        }
+            }
+        })
+    }
+
+    func downloadReadme(url: String)  async throws -> String {
+        try await withCheckedThrowingContinuation({ continuation in
+            AF.request(url,
+                       method: .get,
+                       parameters: nil,
+                       encoding: URLEncoding.default,
+                       headers: nil).responseData { response in
+                        switch response.result {
+                        case .success(let value):
+                            continuation.resume(returning: String(data: value, encoding: .utf8) ?? "")
+                            return
+                        case .failure(let error):
+                            logger.warning("downloadReadme:api, url: \(response.request?.url?.absoluteString ?? ""), error:\(error)")
+                            continuation.resume(throwing: error)
+                            return
+                        }
+            }
+        })
+    }
 }
