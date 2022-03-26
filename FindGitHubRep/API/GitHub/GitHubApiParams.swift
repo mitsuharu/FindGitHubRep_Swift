@@ -19,11 +19,15 @@ struct GitHubApiParams {
     static let LIMIT_PER_PAGE: Int = 30
 
     static func parameters(keyword: String, page: Int) -> [String: Any] {
-        return [
+        [
             "q": keyword + " in:name",
             "page": page,
             "sort": "stars",
             "per_page": LIMIT_PER_PAGE
         ]
+    }
+
+    static func urlReadme(owner: String, repo: String) -> String {
+        "https://api.github.com/repos/\(owner)/\(repo)/readme"
     }
 }

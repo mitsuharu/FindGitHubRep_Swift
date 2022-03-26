@@ -7,7 +7,6 @@
 
 import SwiftUI
 import Logging
-import NavigationKit
 
 public let logger = Logger(label: "com.example.find.github.rep")
 

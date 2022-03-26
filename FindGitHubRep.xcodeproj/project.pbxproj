@@ -40,6 +40,10 @@
 		9B31445D27EEBFE30069E460 /* RouterSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B31445C27EEBFE30069E460 /* RouterSelectors.swift */; };
 		9B31445F27EEC1A20069E460 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B31445E27EEC1A20069E460 /* RootViewModel.swift */; };
 		9B31446227EEC2F90069E460 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B31446127EEC2F90069E460 /* RootView.swift */; };
+		9B31446427EEE5A30069E460 /* DetailViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B31446327EEE5A30069E460 /* DetailViewModal.swift */; };
+		9B31446627EEEE7C0069E460 /* Readme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B31446527EEEE7C0069E460 /* Readme.swift */; };
+		9B31446927EEEFC70069E460 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9B31446827EEEFC70069E460 /* MarkdownUI */; };
+		9B31446E27EF00830069E460 /* RequestStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B31446D27EF00830069E460 /* RequestStatus.swift */; };
 		9B79CAAC27957798006EE615 /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 9B79CAAB27957798006EE615 /* Logging */; };
 		9B79CAAF2795782D006EE615 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9B79CAAE2795782D006EE615 /* Alamofire */; };
 		9B79CAB227957869006EE615 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9B79CAB127957869006EE615 /* AlamofireImage */; };
@@ -120,6 +124,9 @@
 		9B31445C27EEBFE30069E460 /* RouterSelectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterSelectors.swift; sourceTree = "<group>"; };
 		9B31445E27EEC1A20069E460 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		9B31446127EEC2F90069E460 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		9B31446327EEE5A30069E460 /* DetailViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModal.swift; sourceTree = "<group>"; };
+		9B31446527EEEE7C0069E460 /* Readme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Readme.swift; sourceTree = "<group>"; };
+		9B31446D27EF00830069E460 /* RequestStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestStatus.swift; sourceTree = "<group>"; };
 		9B79CAB92795791E006EE615 /* InAppSafariViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppSafariViewState.swift; sourceTree = "<group>"; };
 		9B79CABA2795791E006EE615 /* InAppSafariViewSelectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppSafariViewSelectors.swift; sourceTree = "<group>"; };
 		9B79CABB2795791E006EE615 /* InAppSafariViewReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppSafariViewReducer.swift; sourceTree = "<group>"; };
@@ -149,6 +156,7 @@
 				9B79CAB52795789C006EE615 /* ReMVVMCore in Frameworks */,
 				9B79CAB72795789C006EE615 /* ReMVVMSwiftUI in Frameworks */,
 				9B79CAAC27957798006EE615 /* Logging in Frameworks */,
+				9B31446927EEEFC70069E460 /* MarkdownUI in Frameworks */,
 				96B2C9CE2769A9530073DB41 /* BetterSafariView in Frameworks */,
 				9B79CAAF2795782D006EE615 /* Alamofire in Frameworks */,
 				9B79CAB227957869006EE615 /* AlamofireImage in Frameworks */,
@@ -256,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				96B123AC2769849A0075DF2E /* RemoteImageView.swift */,
+				9B31446D27EF00830069E460 /* RequestStatus.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -281,6 +290,7 @@
 				9B79CAC127957D37006EE615 /* InAppSafariViewModel.swift */,
 				9BED4B4F27A42730003710EC /* ToastViewModel.swift */,
 				9B31445E27EEC1A20069E460 /* RootViewModel.swift */,
+				9B31446327EEE5A30069E460 /* DetailViewModal.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -395,6 +405,7 @@
 				9BDBD1882753718D008DB20C /* Repository.swift */,
 				96B1238D27696E360075DF2E /* GitHubApi+Debug.swift */,
 				96B123AA2769777C0075DF2E /* User.swift */,
+				9B31446527EEEE7C0069E460 /* Readme.swift */,
 			);
 			path = GitHub;
 			sourceTree = "<group>";
@@ -469,6 +480,7 @@
 				9B79CAB42795789C006EE615 /* ReMVVMCore */,
 				9B79CAB62795789C006EE615 /* ReMVVMSwiftUI */,
 				9BED4B4A27A426DC003710EC /* ToastUI */,
+				9B31446827EEEFC70069E460 /* MarkdownUI */,
 			);
 			productName = FindGitHubRep;
 			productReference = 9672883C274DF79000454CC0 /* FindGitHubRep.app */;
@@ -549,6 +561,7 @@
 				9B79CAB027957869006EE615 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 				9B79CAB32795789C006EE615 /* XCRemoteSwiftPackageReference "ReMVVM" */,
 				9BED4B4927A426DC003710EC /* XCRemoteSwiftPackageReference "ToastUI" */,
+				9B31446727EEEFC70069E460 /* XCRemoteSwiftPackageReference "MarkdownUI" */,
 			);
 			productRefGroup = 9672883D274DF79000454CC0 /* Products */;
 			projectDirPath = "";
@@ -639,8 +652,10 @@
 				9B31445627EEB0870069E460 /* RouterState.swift in Sources */,
 				9B31445F27EEC1A20069E460 /* RootViewModel.swift in Sources */,
 				96BA1E03275DE6BA006E3678 /* RepReducers.swift in Sources */,
+				9B31446627EEEE7C0069E460 /* Readme.swift in Sources */,
 				96B123A5276974A90075DF2E /* RepositoryItem.swift in Sources */,
 				9BED4B5027A42730003710EC /* ToastViewModel.swift in Sources */,
+				9B31446427EEE5A30069E460 /* DetailViewModal.swift in Sources */,
 				9BED4B4227A42058003710EC /* ToastState.swift in Sources */,
 				96BA1E02275DE6BA006E3678 /* Repselectors.swift in Sources */,
 				9B31445027EEAB870069E460 /* DetailView.swift in Sources */,
@@ -653,6 +668,7 @@
 				9BED4B4E27A42721003710EC /* Toast.swift in Sources */,
 				968F9D6F2750831C0065F9D1 /* state.swift in Sources */,
 				9B79CABE2795791E006EE615 /* InAppSafariViewSelectors.swift in Sources */,
+				9B31446E27EF00830069E460 /* RequestStatus.swift in Sources */,
 				96B123AB2769777C0075DF2E /* User.swift in Sources */,
 				9B79CAC227957D37006EE615 /* InAppSafariViewModel.swift in Sources */,
 				9B31445D27EEBFE30069E460 /* RouterSelectors.swift in Sources */,
@@ -1019,6 +1035,14 @@
 				minimumVersion = 2.4.0;
 			};
 		};
+		9B31446727EEEFC70069E460 /* XCRemoteSwiftPackageReference "MarkdownUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gonzalezreal/MarkdownUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		9B79CAAA27957798006EE615 /* XCRemoteSwiftPackageReference "swift-log" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apple/swift-log";
@@ -1066,6 +1090,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 96B2C9CC2769A9530073DB41 /* XCRemoteSwiftPackageReference "BetterSafariView" */;
 			productName = BetterSafariView;
+		};
+		9B31446827EEEFC70069E460 /* MarkdownUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B31446727EEEFC70069E460 /* XCRemoteSwiftPackageReference "MarkdownUI" */;
+			productName = MarkdownUI;
 		};
 		9B79CAAB27957798006EE615 /* Logging */ = {
 			isa = XCSwiftPackageProductDependency;

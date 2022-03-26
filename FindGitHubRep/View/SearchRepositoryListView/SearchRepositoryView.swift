@@ -25,7 +25,7 @@ struct SearchRepositoryListView: View {
                     Button {
                         viewModel.enqueueToast(message: item.url, type: nil)
                         // viewModel.openInAppSafariView(url: item.url)
-                        viewModel.navigate(destination: AnyView(DetailView()))
+                        viewModel.navigate(destination: AnyView(DetailView(repository: item)))
                     } label: {
                         RepositoryItem(repository: item).onAppear {
                             if item.id == viewModel.items.last?.id {

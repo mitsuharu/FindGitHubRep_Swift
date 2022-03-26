@@ -18,7 +18,7 @@ struct Repository: Codable, Identifiable {
     let stars: Int
     let watchers: Int
     let topics: [String]
-    //    let defaultBranch: String
+    let defaultBranch: String
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -30,6 +30,6 @@ struct Repository: Codable, Identifiable {
         case stars = "stargazers_count"
         case watchers = "watchers_count"
         case topics
-        //        case defaultBranch = "default_branch"
+        case defaultBranch = "default_branch"
     }
 }
