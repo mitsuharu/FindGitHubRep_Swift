@@ -8,21 +8,10 @@
 import SwiftUI
 
 struct RootView: View {
-
-    @ObservedObject private var nagivationService = NavigationService()
-
     var body: some View {
         NavigationView {
-            VStack {
-                SearchRepositoryListView()
-                NavigationLink(
-                    destination: nagivationService.destination,
-                    isActive: $nagivationService.isActive) {
-                    EmptyView()
-                }
-            }
+            SearchRepositoryListView()
         }.navigationViewStyle(StackNavigationViewStyle())
-        .environmentObject(nagivationService)
     }
 }
 

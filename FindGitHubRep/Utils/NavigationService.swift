@@ -11,45 +11,26 @@ import SwiftUI
 /**
  Navigation 遷移を管理する
 
- - RootView 相当で environmentObject として設定して、NavigationLink を制御する
- - 遷移したい箇所で　EnvironmentObject として呼び出し、遷移関数を実行する
-
- RootView（lint でタブが削除・・・）
-
+ FirstView から SecondView に遷移する（lint でインデントが削除・・・）
  ```
- struct RootView: View {
- @ObservedObject private var nagivationService = NavigationService()
+ struct FirstView: View {
+
+ @ObservedObject private var navigationService = NavigationService()
+
+ func onPress(_ repo: Repository) {
+ navigationService.navigate(AnyView(SecondView()))
+ }
+
  var body: some View {
- NavigationView {
- VStack {
- MainView()
- NavigationLink(
- destination: nagivationService.destination,
- isActive: $nagivationService.isActive) {
- EmptyView()
+ NavigationServiceView(navigationService) {
+ FirstComponent(onPress: onPress)
  }
  }
- }
- .navigationViewStyle(StackNavigationViewStyle())
- .environmentObject(nagivationService)
- }
- }
- ```
 
- MainView（lint でタブが削除・・・）
- ```
- struct MainView: View {
- @EnvironmentObject var navigationService: NavigationService
- var body: some View {
- Button(action: {
- navigationService.navigate(destination: AnyView(NextView()))
- }){
- Text("next")
- }
- }
  }
  ```
  */
+
 class NavigationService: ObservableObject {
     @Published private(set) var destination: AnyView?
     @Published var isActive = false {
@@ -61,8 +42,30 @@ class NavigationService: ObservableObject {
         }
     }
 
-    func navigate(destination: AnyView?) {
+    func navigate(_ destination: AnyView?) {
         self.destination = destination
         self.isActive = destination != nil
+    }
+}
+
+struct NavigationServiceView<T: View>: View {
+
+    @ObservedObject private var navigationService: NavigationService
+    private let content: () -> T
+
+    public init(_ navigationService: NavigationService, content: @escaping () -> T) {
+        self.navigationService = navigationService
+        self.content = content
+    }
+
+    var body: some View {
+        VStack {
+            content()
+            NavigationLink(
+                destination: navigationService.destination,
+                isActive: $navigationService.isActive) {
+                EmptyView()
+            }
+        }.environmentObject(navigationService)
     }
 }

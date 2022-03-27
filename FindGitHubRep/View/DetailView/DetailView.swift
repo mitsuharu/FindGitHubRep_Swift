@@ -9,10 +9,12 @@ import SwiftUI
 import ReMVVMSwiftUI
 import MarkdownUI
 
-struct DetailView: View, Sendable {
+private struct Component: View {
 
-    let repository: Repository!
-    @ReMVVM.ViewModel private var viewModel: DetailViewModel!
+    let repository: Repository
+    let textMarkdown: String!
+    let requestStatusMarkdown: RequestStatus!
+    let onPressWebView: (_ url: String? ) -> Void
 
     var body: some View {
         ScrollView {
@@ -51,11 +53,11 @@ struct DetailView: View, Sendable {
 
             Text("Readme").bold().font(.title2).frame(maxWidth: .infinity, alignment: .leading).padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
             ZStack {
-                switch viewModel.requestStatusMarkdown {
+                switch requestStatusMarkdown {
                 case .success:
-                    Markdown(viewModel.markdown)
+                    Markdown(textMarkdown)
                         .onOpenMarkdownLink { url in
-                            viewModel.openInAppSafariView(url: url.absoluteString)
+                            onPressWebView(url.absoluteString)
                         }
                         .padding(.horizontal, 8.0)
                 case .faild:
@@ -67,17 +69,36 @@ struct DetailView: View, Sendable {
                     EmptyView()
                 }
             }
-
         }
         .navigationTitle(repository.name)
         .navigationBarItems(
             trailing: Button("WebView", action: {
-                viewModel.openInAppSafariView(url: repository.url)
+                onPressWebView(nil)
             })
-        ).onAppear {
+        )
+    }
+}
+
+struct DetailView: View, Sendable {
+
+    let repository: Repository!
+    @ReMVVM.ViewModel private var viewModel: DetailViewModel!
+    @ObservedObject private var navigationService = NavigationService()
+
+    func onPressWebView(_ url: String?) {
+        viewModel.openInAppSafariView(url: url ?? repository.url)
+    }
+
+    var body: some View {
+        NavigationServiceView(navigationService) {
+            Component(repository: repository,
+                      textMarkdown: viewModel.textMarkdown,
+                      requestStatusMarkdown: viewModel.requestStatusMarkdown,
+                      onPressWebView: onPressWebView)
+        }.onAppear {
             Task {
                 if self.viewModel.requestStatusMarkdown != .success {
-                    await self.viewModel.requestMarkdown(repository: self.repository)
+                    self.viewModel.requestMarkdown(repository: self.repository)
                 }
             }
         }
