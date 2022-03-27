@@ -57,7 +57,7 @@ struct SearchRepositoryListView: View {
     func onPress(_ repo: Repository) {
         viewModel.enqueueToast(message: "\(repo.name) の詳細画面を開きます（ただトースト表示の動作確認のため）",
                                type: nil)
-        navigationService.navigate(AnyView(DetailView(repository: repo)))
+        navigationService.navigate(DetailView(repository: repo))
     }
 
     func loadMore() {
