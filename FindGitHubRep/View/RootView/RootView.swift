@@ -6,25 +6,23 @@
 //
 
 import SwiftUI
-import ReMVVMSwiftUI
 
 struct RootView: View {
 
-    @ReMVVM.ViewModel private var viewModel: RootViewModel!
+    @ObservedObject private var nagivationService = NavigationService()
 
     var body: some View {
         NavigationView {
             VStack {
                 SearchRepositoryListView()
-                InAppSafariView()
-                Toast()
                 NavigationLink(
-                    destination: viewModel.destination,
-                    isActive: $viewModel.isActive) {
+                    destination: nagivationService.destination,
+                    isActive: $nagivationService.isActive) {
                     EmptyView()
                 }
             }
         }.navigationViewStyle(StackNavigationViewStyle())
+        .environmentObject(nagivationService)
     }
 }
 

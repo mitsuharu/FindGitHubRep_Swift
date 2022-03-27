@@ -31,17 +31,11 @@ struct RootReducer: Reducer {
             nextToast = ToastReducer.reduce(state: state.toast, with: action)
         }
 
-        var nextRouter = state.router
-        if action is RouterAction {
-            nextRouter = RouterReducer.reduce(state: state.router, with: action)
-        }
-
         return RootState(
             counter: nextCounter,
             repository: nextRepository,
             inAppSafariView: nextInAppSafariView,
-            toast: nextToast,
-            router: nextRouter
+            toast: nextToast
         )
     }
 }

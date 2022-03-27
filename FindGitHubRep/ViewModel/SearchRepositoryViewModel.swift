@@ -91,7 +91,4 @@ final class SearchRepositoryViewModel: ObservableObject, Initializable, Sendable
         dispatcher[ToastAction.enqueueToast(message: message, type: type)]()
     }
 
-    public func navigate(destination: AnyView?) {
-        dispatcher[RouterAction.navigate(destination: destination)]()
-    }
 }
