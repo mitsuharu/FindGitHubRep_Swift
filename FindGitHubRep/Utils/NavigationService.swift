@@ -18,7 +18,7 @@ import SwiftUI
  @ObservedObject private var navigationService = NavigationService()
 
  func onPress(_ repo: Repository) {
- navigationService.navigate(AnyView(SecondView()))
+ navigationService.navigate(SecondView())
  }
 
  var body: some View {
@@ -42,9 +42,9 @@ class NavigationService: ObservableObject {
         }
     }
 
-    func navigate(_ destination: AnyView?) {
-        self.destination = destination
-        self.isActive = destination != nil
+    func navigate<Destination: View>(_ destination: Destination ) {
+        self.destination = AnyView(destination)
+        self.isActive = true
     }
 }
 
@@ -66,6 +66,6 @@ struct NavigationServiceView<T: View>: View {
                 isActive: $navigationService.isActive) {
                 EmptyView()
             }
-        }.environmentObject(navigationService)
+        }
     }
 }
