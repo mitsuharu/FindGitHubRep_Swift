@@ -13,6 +13,7 @@ struct SearchRepositoryListView: View {
 
     @State private var searchText: String = ""
     @ReMVVM.ViewModel private var viewModel: SearchRepositoryViewModel!
+    @EnvironmentObject var navigationService: NavigationService
 
     var body: some View {
         //        NavigationView {
@@ -24,8 +25,7 @@ struct SearchRepositoryListView: View {
                 ForEach(viewModel.items) { item in
                     Button {
                         viewModel.enqueueToast(message: item.url, type: nil)
-                        // viewModel.openInAppSafariView(url: item.url)
-                        viewModel.navigate(destination: AnyView(DetailView(repository: item)))
+                        navigationService.navigate(destination: AnyView(DetailView(repository: item)))
                     } label: {
                         RepositoryItem(repository: item).onAppear {
                             if item.id == viewModel.items.last?.id {

@@ -13,15 +13,13 @@ struct RootState: StoreState {
     let repository: RepositoryState
     let inAppSafariView: InAppSafariViewState
     let toast: ToastState
-    let router: RouterState
 
     static func initialState() -> RootState {
         RootState(
             counter: CounterState.initialState(),
             repository: RepositoryState.initialState(),
             inAppSafariView: InAppSafariViewState.initialState(),
-            toast: ToastState.initialState(),
-            router: RouterState.initialState()
+            toast: ToastState.initialState()
         )
     }
 }
