@@ -8,12 +8,12 @@
 import Foundation
 import ReMVVMSwiftUI
 
-final class DetailViewModel: ObservableObject, Initializable {
+final class DetailViewModel: ObservableObject, Initializable, Sendable {
 
     @ReMVVM.State<RootState> private var state
     @ReMVVM.Dispatcher private var dispatcher
 
-    @Published var markdown: String = ""
+    @Published var textMarkdown: String = ""
     @Published var requestStatusMarkdown: RequestStatus = .initialize
 
     let api = API()
@@ -25,16 +25,22 @@ final class DetailViewModel: ObservableObject, Initializable {
         dispatcher[InAppSafariViewAction.show(url: url)]()
     }
 
-    public func requestMarkdown(repository: Repository) async {
-        do {
-            self.requestStatusMarkdown = .loading
-            let url = try await api.requestReadmeDownloadUrl(owner: repository.owner.name, repo: repository.name)
-            self.markdown = try await api.downloadReadme(url: url)
-            self.requestStatusMarkdown = .success
-        } catch {
-            logger.warning("error: \(error), localizedDescription: \(error.localizedDescription)")
-            self.markdown = ""
-            self.requestStatusMarkdown = .faild
+    public func requestMarkdown(repository: Repository) {
+        Task { [weak self] in
+            guard let self = self else {
+                return
+            }
+            do {
+                self.requestStatusMarkdown = .loading
+                let url = try await api.requestReadmeDownloadUrl(owner: repository.owner.name,
+                                                                 repo: repository.name)
+                self.textMarkdown = try await api.downloadReadme(url: url)
+                self.requestStatusMarkdown = .success
+            } catch {
+                logger.warning("error: \(error), localizedDescription: \(error.localizedDescription)")
+                self.textMarkdown = ""
+                self.requestStatusMarkdown = .faild
+            }
         }
     }
 
