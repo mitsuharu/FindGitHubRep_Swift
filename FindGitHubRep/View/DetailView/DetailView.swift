@@ -9,15 +9,32 @@ import SwiftUI
 import ReMVVMSwiftUI
 import MarkdownUI
 
-private struct Component: View {
+private protocol DetailViewProps {
+    var repository: Repository! { get }
+}
 
-    let repository: Repository
+private protocol DetailViewComponentProps: DetailViewProps {
+    var textMarkdown: String! { get }
+    var requestStatusMarkdown: RequestStatus! { get }
+    var onPressWebView: (_ url: String? ) -> Void { get }
+}
+
+private struct Component: View, DetailViewComponentProps {
+
+    let repository: Repository!
     let textMarkdown: String!
     let requestStatusMarkdown: RequestStatus!
-    let onPressWebView: (_ url: String? ) -> Void
+    let onPressWebView: (String?) -> Void
 
     var body: some View {
         ScrollView {
+            HStack {
+                RemoteImageView(url: repository.owner.avatarUrl).frame(width: 40, height: 40)
+                Text(repository.owner.name).font(.body)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.horizontal, 12)
+
             if let str = repository.description {
                 Text(str)
                     .font(.body).lineLimit(3).padding(.top, 1.0)
@@ -79,7 +96,7 @@ private struct Component: View {
     }
 }
 
-struct DetailView: View, Sendable {
+struct DetailView: View, DetailViewProps, Sendable {
 
     let repository: Repository!
     @ReMVVM.ViewModel private var viewModel: DetailViewModel!

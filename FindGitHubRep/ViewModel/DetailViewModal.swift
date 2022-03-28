@@ -31,15 +31,24 @@ final class DetailViewModel: ObservableObject, Initializable, Sendable {
                 return
             }
             do {
-                self.requestStatusMarkdown = .loading
+                await MainActor.run {
+                    self.requestStatusMarkdown = .loading
+                }
                 let url = try await api.requestReadmeDownloadUrl(owner: repository.owner.name,
                                                                  repo: repository.name)
-                self.textMarkdown = try await api.downloadReadme(url: url)
-                self.requestStatusMarkdown = .success
+                let result = try await api.downloadReadme(url: url)
+
+                await MainActor.run {
+                    self.textMarkdown = result
+                    self.requestStatusMarkdown = .success
+                }
+
             } catch {
                 logger.warning("error: \(error), localizedDescription: \(error.localizedDescription)")
-                self.textMarkdown = ""
-                self.requestStatusMarkdown = .faild
+                await MainActor.run {
+                    self.textMarkdown = ""
+                    self.requestStatusMarkdown = .faild
+                }
             }
         }
     }

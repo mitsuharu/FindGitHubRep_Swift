@@ -10,14 +10,12 @@ import ReMVVMSwiftUI
 
 struct RootState: StoreState {
     let counter: CounterState
-    let repository: RepositoryState
     let inAppSafariView: InAppSafariViewState
     let toast: ToastState
 
     static func initialState() -> RootState {
         RootState(
             counter: CounterState.initialState(),
-            repository: RepositoryState.initialState(),
             inAppSafariView: InAppSafariViewState.initialState(),
             toast: ToastState.initialState()
         )
