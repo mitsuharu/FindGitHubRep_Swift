@@ -1,16 +1,16 @@
 //
-//  SearchListViewModel.swift
+//  SearchRepositoryViewModel2.swift
 //  FindGitHubRep
 //
-//  Created by Mitsuharu Emoto on 2021/12/06.
+//  Created by Mitsuharu Emoto on 2022/03/28.
 //
 
 import Foundation
 import ReMVVMSwiftUI
-import SwiftUI
 
 final class SearchRepositoryViewModel: ObservableObject, Initializable, Sendable {
-    @Published private(set) var isRequesting = false
+
+    @Published private(set) var requestStatus: RequestStatus = .initialize
     @Published private(set) var keyword: String = ""
     @Published private(set) var page: Int = 0
     @Published private(set) var total: Int = 0
@@ -24,13 +24,6 @@ final class SearchRepositoryViewModel: ObservableObject, Initializable, Sendable
     let api = API()
 
     required init() {
-        $state.map(selectRepositoryIsRequesting).assign(to: &$isRequesting)
-        $state.map(selectRepositoryKeyword).assign(to: &$keyword)
-        $state.map(selectRepositoryPage).assign(to: &$page)
-        $state.map(selectRepositoryTotal).assign(to: &$total)
-        $state.map(selectRepositoryHasNext).assign(to: &$hasNext)
-        $state.map(selectRepositoryItems).assign(to: &$items)
-        $state.map(selectRepositoryError).assign(to: &$error)
     }
 
     public func requestRepositories(keyword: String) {
@@ -39,7 +32,7 @@ final class SearchRepositoryViewModel: ObservableObject, Initializable, Sendable
             guard let self = self else {
                 return
             }
-            if self.isRequesting {
+            if self.requestStatus == .loading {
                 return
             }
             await self.fetch(keyword: keyword, page: 1)
@@ -52,7 +45,7 @@ final class SearchRepositoryViewModel: ObservableObject, Initializable, Sendable
             guard let self = self else {
                 return
             }
-            if self.isRequesting || !self.hasNext {
+            if self.requestStatus == .loading || !self.hasNext {
                 return
             }
             await self.fetch(keyword: self.keyword, page: self.page + 1)
@@ -61,25 +54,22 @@ final class SearchRepositoryViewModel: ObservableObject, Initializable, Sendable
 
     public func fetch(keyword: String, page: Int) async {
         do {
-            await MainActor.run { [weak self] in
-                // この非同期関数のなかで、画面更新に関わるところなので MainActor でメインスレッドで実行する
-                self?.dispatcher[RepositoryAction.fetch(keyword: keyword, page: page)]()
-            }
+            self.requestStatus = .loading
 
             // 未認証なので、リクエスト発火を抑える
             await api.delay(sec: 0.5)
             let result = try await api.searchRepositories(keyword: keyword, page: page)
 
-            await MainActor.run { [weak self] in
-                // この非同期関数のなかで、画面更新に関わるところなので MainActor でメインスレッドで実行する
-                self?.dispatcher[RepositoryAction.succeeded(result)]()
-            }
+            self.keyword = keyword
+            self.page = page
+            self.items += result.items
+            self.total = result.total
+            self.hasNext = self.items.count < self.total
+            self.requestStatus = .success
         } catch {
             logger.warning("error: \(error), localizedDescription: \(error.localizedDescription)")
-            await MainActor.run { [weak self] in
-                // この非同期関数のなかで、画面更新に関わるところなので MainActor でメインスレッドで実行する
-                self?.dispatcher[RepositoryAction.failed(error)]()
-            }
+            self.requestStatus = .faild
+            self.error = error
         }
     }
 

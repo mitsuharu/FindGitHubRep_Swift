@@ -14,14 +14,14 @@ private struct Component: View {
     @State private var searchText: String = ""
 
     let items: [Repository]
-    let isRequesting: Bool
+    let requestStatus: RequestStatus
     let onPress: (_ repo: Repository) -> Void
     let requestRepositories: (_ keyword: String) -> Void
     let loadMore: () -> Void
 
     var body: some View {
         List {
-            if items.count == 0 && isRequesting {
+            if items.count == 0 && requestStatus == .loading {
                 ProgressView()
                     .frame(idealWidth: .infinity, maxWidth: .infinity, alignment: .center)
             } else {
@@ -71,10 +71,16 @@ struct SearchRepositoryListView: View {
     var body: some View {
         NavigationServiceView(navigationService) {
             Component(items: viewModel.items,
-                      isRequesting: viewModel.isRequesting,
+                      requestStatus: viewModel.requestStatus,
                       onPress: onPress,
                       requestRepositories: requestRepositories,
                       loadMore: loadMore)
+                .onChange(of: viewModel.requestStatus) { newValue in
+                    if newValue == .faild {
+                        let message = "失敗しました。" + (viewModel.error?.localizedDescription ?? "")
+                        viewModel.enqueueToast(message: message, type: .error)
+                    }
+                }
         }
     }
 }

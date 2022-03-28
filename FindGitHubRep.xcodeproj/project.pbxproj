@@ -29,10 +29,6 @@
 		96B123AD2769849A0075DF2E /* RemoteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B123AC2769849A0075DF2E /* RemoteImageView.swift */; };
 		96B2C9CE2769A9530073DB41 /* BetterSafariView in Frameworks */ = {isa = PBXBuildFile; productRef = 96B2C9CD2769A9530073DB41 /* BetterSafariView */; };
 		96BA1DFB275DE3EE006E3678 /* SearchRepositoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA1DFA275DE3EE006E3678 /* SearchRepositoryViewModel.swift */; };
-		96BA1E01275DE6BA006E3678 /* RepState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA1DFD275DE6BA006E3678 /* RepState.swift */; };
-		96BA1E02275DE6BA006E3678 /* Repselectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA1DFE275DE6BA006E3678 /* Repselectors.swift */; };
-		96BA1E03275DE6BA006E3678 /* RepReducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA1DFF275DE6BA006E3678 /* RepReducers.swift */; };
-		96BA1E04275DE6BA006E3678 /* RepActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA1E00275DE6BA006E3678 /* RepActions.swift */; };
 		9B31445027EEAB870069E460 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B31444F27EEAB870069E460 /* DetailView.swift */; };
 		9B31446227EEC2F90069E460 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B31446127EEC2F90069E460 /* RootView.swift */; };
 		9B31446427EEE5A30069E460 /* DetailViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B31446327EEE5A30069E460 /* DetailViewModal.swift */; };
@@ -109,10 +105,6 @@
 		96B123AA2769777C0075DF2E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		96B123AC2769849A0075DF2E /* RemoteImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageView.swift; sourceTree = "<group>"; };
 		96BA1DFA275DE3EE006E3678 /* SearchRepositoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoryViewModel.swift; sourceTree = "<group>"; };
-		96BA1DFD275DE6BA006E3678 /* RepState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepState.swift; sourceTree = "<group>"; };
-		96BA1DFE275DE6BA006E3678 /* Repselectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repselectors.swift; sourceTree = "<group>"; };
-		96BA1DFF275DE6BA006E3678 /* RepReducers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepReducers.swift; sourceTree = "<group>"; };
-		96BA1E00275DE6BA006E3678 /* RepActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepActions.swift; sourceTree = "<group>"; };
 		9B31444F27EEAB870069E460 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		9B31446127EEC2F90069E460 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		9B31446327EEE5A30069E460 /* DetailViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModal.swift; sourceTree = "<group>"; };
@@ -303,7 +295,6 @@
 			children = (
 				9BED4B4027A42049003710EC /* Toast */,
 				9B79CAB82795791E006EE615 /* InAppSafariView */,
-				96BA1DFC275DE6BA006E3678 /* Repository */,
 				968F9D682750831C0065F9D1 /* Counter */,
 			);
 			path = Modules;
@@ -335,17 +326,6 @@
 				96B123A8276975A30075DF2E /* SearchRepositoryResult.json */,
 			);
 			path = json;
-			sourceTree = "<group>";
-		};
-		96BA1DFC275DE6BA006E3678 /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				96BA1DFD275DE6BA006E3678 /* RepState.swift */,
-				96BA1DFE275DE6BA006E3678 /* Repselectors.swift */,
-				96BA1DFF275DE6BA006E3678 /* RepReducers.swift */,
-				96BA1E00275DE6BA006E3678 /* RepActions.swift */,
-			);
-			path = Repository;
 			sourceTree = "<group>";
 		};
 		9B31444E27EEAB650069E460 /* DetailView */ = {
@@ -608,11 +588,9 @@
 			files = (
 				9BED4B4627A421AD003710EC /* ToastReducer.swift in Sources */,
 				9BDBD17C275355FA008DB20C /* API.swift in Sources */,
-				96BA1E04275DE6BA006E3678 /* RepActions.swift in Sources */,
 				9B31447027EFDEBA0069E460 /* NavigationService.swift in Sources */,
 				96B123AD2769849A0075DF2E /* RemoteImageView.swift in Sources */,
 				968F9D4D275076200065F9D1 /* CounterViewModel.swift in Sources */,
-				96BA1E01275DE6BA006E3678 /* RepState.swift in Sources */,
 				9B79CAC02795791E006EE615 /* InAppSafariViewAction.swift in Sources */,
 				9B79CABF2795791E006EE615 /* InAppSafariViewReducer.swift in Sources */,
 				96BA1DFB275DE3EE006E3678 /* SearchRepositoryViewModel.swift in Sources */,
@@ -628,13 +606,11 @@
 				96728840274DF79000454CC0 /* FindGitHubRepApp.swift in Sources */,
 				9B31446227EEC2F90069E460 /* RootView.swift in Sources */,
 				968F9D4F275076C40065F9D1 /* CounterView.swift in Sources */,
-				96BA1E03275DE6BA006E3678 /* RepReducers.swift in Sources */,
 				9B31446627EEEE7C0069E460 /* Readme.swift in Sources */,
 				96B123A5276974A90075DF2E /* RepositoryItem.swift in Sources */,
 				9BED4B5027A42730003710EC /* ToastViewModel.swift in Sources */,
 				9B31446427EEE5A30069E460 /* DetailViewModal.swift in Sources */,
 				9BED4B4227A42058003710EC /* ToastState.swift in Sources */,
-				96BA1E02275DE6BA006E3678 /* Repselectors.swift in Sources */,
 				9B31445027EEAB870069E460 /* DetailView.swift in Sources */,
 				968F9D702750831C0065F9D1 /* reducers.swift in Sources */,
 				9BDBD18727536FE7008DB20C /* SearchRepositoryResult.swift in Sources */,
