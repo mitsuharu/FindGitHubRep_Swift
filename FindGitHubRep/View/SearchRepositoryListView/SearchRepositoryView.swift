@@ -7,14 +7,21 @@
 
 import SwiftUI
 import ReMVVMSwiftUI
-import BetterSafariView
 
-private struct Component: View {
+private protocol SearchRepositoryListViewComponentProps {
+    var items: [Repository]! { get }
+    var requestStatus: RequestStatus! { get }
+    var onPress: (_ repo: Repository) -> Void { get }
+    var requestRepositories: (_ keyword: String) -> Void { get }
+    var loadMore: () -> Void { get }
+}
+
+private struct Component: View, SearchRepositoryListViewComponentProps {
 
     @State private var searchText: String = ""
 
-    let items: [Repository]
-    let requestStatus: RequestStatus
+    let items: [Repository]!
+    let requestStatus: RequestStatus!
     let onPress: (_ repo: Repository) -> Void
     let requestRepositories: (_ keyword: String) -> Void
     let loadMore: () -> Void
@@ -77,7 +84,7 @@ struct SearchRepositoryListView: View {
                       loadMore: loadMore)
                 .onChange(of: viewModel.requestStatus) { newValue in
                     if newValue == .faild {
-                        let message = "失敗しました。" + (viewModel.error?.localizedDescription ?? "")
+                        let message = "取得に失敗しました。" + (viewModel.error?.localizedDescription ?? "")
                         viewModel.enqueueToast(message: message, type: .error)
                     }
                 }

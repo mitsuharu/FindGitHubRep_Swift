@@ -54,22 +54,27 @@ final class SearchRepositoryViewModel: ObservableObject, Initializable, Sendable
 
     public func fetch(keyword: String, page: Int) async {
         do {
-            self.requestStatus = .loading
-
+            await MainActor.run {
+                self.requestStatus = .loading
+            }
             // 未認証なので、リクエスト発火を抑える
             await api.delay(sec: 0.5)
             let result = try await api.searchRepositories(keyword: keyword, page: page)
 
-            self.keyword = keyword
-            self.page = page
-            self.items += result.items
-            self.total = result.total
-            self.hasNext = self.items.count < self.total
-            self.requestStatus = .success
+            await MainActor.run {
+                self.keyword = keyword
+                self.page = page
+                self.items += result.items
+                self.total = result.total
+                self.hasNext = self.items.count < self.total
+                self.requestStatus = .success
+            }
         } catch {
             logger.warning("error: \(error), localizedDescription: \(error.localizedDescription)")
-            self.requestStatus = .faild
-            self.error = error
+            await MainActor.run {
+                self.requestStatus = .faild
+                self.error = error
+            }
         }
     }
 
