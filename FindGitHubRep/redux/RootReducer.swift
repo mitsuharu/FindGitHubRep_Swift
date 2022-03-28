@@ -12,13 +12,8 @@ struct RootReducer: Reducer {
     static func reduce(state: RootState, with action: StoreAction) -> RootState {
 
         var nextCounter = state.counter
-        if action is RepositoryAction {
+        if action is CounterAction {
             nextCounter = CounterReducer.reduce(state: state.counter, with: action)
-        }
-
-        var nextRepository = state.repository
-        if action is RepositoryAction {
-            nextRepository = RepositoryReducer.reduce(state: state.repository, with: action)
         }
 
         var nextInAppSafariView = state.inAppSafariView
@@ -33,7 +28,6 @@ struct RootReducer: Reducer {
 
         return RootState(
             counter: nextCounter,
-            repository: nextRepository,
             inAppSafariView: nextInAppSafariView,
             toast: nextToast
         )
