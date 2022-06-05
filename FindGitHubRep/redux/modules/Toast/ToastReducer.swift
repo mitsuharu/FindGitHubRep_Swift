@@ -6,23 +6,21 @@
 //
 
 import Foundation
-import ReMVVMSwiftUI
+import ReSwift
 
-enum ToastReducer: Reducer {
-    static func reduce(state: ToastState,
-                       with action: ToastAction) -> ToastState {
-        switch action {
-        case .enqueueToast(message: let message, type: let type):
-            let id: Int = Int(Date().timeIntervalSince1970)
-            let item = ToastItem(id: id, message: message, type: type ?? .info)
-            return ToastState(items: state.items + [item])
+func toastReducer(action: ToastActions, state: ToastState) -> ToastState {
 
-        case .dequeueToast(id: let id):
-            let next = state.items.filter { $0.id != id }
-            return ToastState(items: next)
+    switch action {
+    case .enqueueToast(message: let message, type: let type):
+        let id = Int(Date().timeIntervalSince1970)
+        let item = ToastItem(id: id, message: message, type: type ?? .info)
+        return ToastState(items: state.items + [item])
 
-        case .clearToast:
-            return ToastState(items: [])
-        }
+    case .dequeueToast(id: let id):
+        let next = state.items.filter { $0.id != id }
+        return ToastState(items: next)
+
+    case .clearToast:
+        return ToastState(items: [])
     }
 }

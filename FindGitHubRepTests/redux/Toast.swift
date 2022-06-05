@@ -19,20 +19,18 @@ class Toast: XCTestCase {
     }
 
     func testReducerEnqueueToast() throws {
-        let state: ToastState = ToastState(items: [])
+        let state = ToastState(items: [])
         let message = "test_message"
-        let nextState = ToastReducer.reduce(state: state,
-                                            with: .enqueueToast(message: message, type: nil))
+        let nextState = toastReducer(action: .enqueueToast(message: message, type: nil), state: state)
         XCTAssertEqual(nextState.items.count, state.items.count + 1)
         XCTAssertEqual(nextState.items.last?.message, message)
     }
 
     func testReducerDequeueToast() throws {
         let itemId = 1234
-        let item: ToastItem = ToastItem(id: itemId, message: "test", type: .info)
-        let state: ToastState = ToastState(items: [item])
-        let nextState = ToastReducer.reduce(state: state,
-                                            with: .dequeueToast(id: itemId))
+        let item = ToastItem(id: itemId, message: "test", type: .info)
+        let state = ToastState(items: [item])
+        let nextState = toastReducer(action: .dequeueToast(id: itemId), state: state)
         XCTAssertEqual(nextState.items.count, state.items.count - 1)
 
         let nextItem: ToastItem? = nextState.items.first { it in
@@ -42,10 +40,10 @@ class Toast: XCTestCase {
     }
 
     func testReducerClearToast() throws {
-        let item: ToastItem = ToastItem(id: 1234, message: "test", type: .info)
-        let state: ToastState = ToastState(items: [item])
-        let nextState = ToastReducer.reduce(state: state,
-                                            with: .clearToast)
+        let item = ToastItem(id: 1234, message: "test", type: .info)
+        let state = ToastState(items: [item])
+        let nextState = toastReducer(action: .clearToast, state: state)
         XCTAssertEqual(nextState.items.count, 0)
     }
+
 }

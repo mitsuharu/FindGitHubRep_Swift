@@ -6,23 +6,21 @@
 //
 
 import Foundation
-import ReMVVMSwiftUI
+import ReSwift
 
-final class DetailViewModel: ObservableObject, Initializable, Sendable {
-
-    @ReMVVM.State<RootState> private var state
-    @ReMVVM.Dispatcher private var dispatcher
+final class DetailViewModel: ObservableObject, Sendable {
 
     @Published var textMarkdown: String = ""
     @Published var requestStatusMarkdown: RequestStatus = .initialize
 
     let api = API()
+    let inAppWebViewModel = InAppWebViewModel()
 
     required init() {
     }
 
     public func openInAppSafariView(url: String) {
-        dispatcher[InAppSafariViewAction.show(url: url)]()
+        inAppWebViewModel.show(url: url)
     }
 
     public func requestMarkdown(repository: Repository) {

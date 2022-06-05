@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import ReMVVMSwiftUI
+import ReSwift
 
 enum ToastType {
     case info
@@ -20,9 +20,10 @@ struct ToastItem: Identifiable, Equatable {
     let type: ToastType
 }
 
-struct ToastState: StoreState {
+struct ToastState {
     let items: [ToastItem]
+
     static func initialState() -> ToastState {
-        return ToastState(items: [])
+        ToastState(items: [])
     }
 }

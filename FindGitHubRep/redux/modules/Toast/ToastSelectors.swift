@@ -7,16 +7,16 @@
 
 import Foundation
 
-func selectToastItems(store: RootState) -> [ToastItem] {
-    return store.toast.items
+func selectToastItems(store: AppState) -> [ToastItem] {
+    store.toast.items
 }
 
-func selectToastItem(store: RootState) -> ToastItem? {
+func selectToastItem(store: AppState) -> ToastItem? {
     let items = selectToastItems(store: store)
     return items.first
 }
 
-func selectToastItemId(store: RootState) -> Int {
+func selectToastItemId(store: AppState) -> Int {
     let items = selectToastItems(store: store)
     return items.first?.id ?? -1
 }

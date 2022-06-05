@@ -6,9 +6,9 @@
 //
 
 import Foundation
-import ReMVVMSwiftUI
+import ReSwift
 
-enum InAppSafariViewAction: StoreAction {
+enum InAppWebActions: Action {
     case show(url: String)
-    case dismiss
+    case clear
 }

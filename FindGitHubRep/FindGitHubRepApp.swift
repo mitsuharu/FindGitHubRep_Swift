@@ -8,15 +8,15 @@
 import SwiftUI
 import Logging
 
+let appStore = makeAppStore()
 public let logger = Logger(label: "com.example.find.github.rep")
 
 @main
 struct FindGitHubRepApp: App {
-    let store = initializeRedux()
     var body: some Scene {
         WindowGroup {
             RootView()
-            InAppSafariView()
+            InAppWebView()
             Toast()
         }
     }

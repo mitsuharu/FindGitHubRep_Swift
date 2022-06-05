@@ -6,9 +6,9 @@
 //
 
 import Foundation
-import ReMVVMSwiftUI
+import ReSwift
 
-final class SearchRepositoryViewModel: ObservableObject, Initializable, Sendable {
+final class SearchRepositoryViewModel: ObservableObject, Sendable {
 
     @Published private(set) var requestStatus: RequestStatus = .initialize
     @Published private(set) var keyword: String = ""
@@ -17,9 +17,6 @@ final class SearchRepositoryViewModel: ObservableObject, Initializable, Sendable
     @Published private(set) var hasNext = false
     @Published private(set) var items: [Repository] = []
     @Published private(set) var error: Error?
-
-    @ReMVVM.State<RootState> private var state
-    @ReMVVM.Dispatcher private var dispatcher
 
     let api = API()
 
@@ -79,11 +76,11 @@ final class SearchRepositoryViewModel: ObservableObject, Initializable, Sendable
     }
 
     public func openInAppSafariView(url: String) {
-        dispatcher[InAppSafariViewAction.show(url: url)]()
+        appStore.dispatch(InAppWebActions.show(url: url))
     }
 
     public func enqueueToast(message: String, type: ToastType?) {
-        dispatcher[ToastAction.enqueueToast(message: message, type: type)]()
+        appStore.dispatch(ToastActions.enqueueToast(message: message, type: type))
     }
 
 }

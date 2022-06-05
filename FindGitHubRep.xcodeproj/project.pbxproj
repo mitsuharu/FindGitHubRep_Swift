@@ -12,15 +12,9 @@
 		96728851274DF79300454CC0 /* FindGitHubRepTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96728850274DF79300454CC0 /* FindGitHubRepTests.swift */; };
 		9672885B274DF79300454CC0 /* FindGitHubRepUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9672885A274DF79300454CC0 /* FindGitHubRepUITests.swift */; };
 		9672885D274DF79300454CC0 /* FindGitHubRepUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9672885C274DF79300454CC0 /* FindGitHubRepUITestsLaunchTests.swift */; };
-		968F9D4D275076200065F9D1 /* CounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D4C275076200065F9D1 /* CounterViewModel.swift */; };
-		968F9D4F275076C40065F9D1 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D4E275076C40065F9D1 /* CounterView.swift */; };
-		968F9D6C2750831C0065F9D1 /* InitializeRedux.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D642750831C0065F9D1 /* InitializeRedux.swift */; };
-		968F9D6D2750831C0065F9D1 /* RootState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D652750831C0065F9D1 /* RootState.swift */; };
-		968F9D6E2750831C0065F9D1 /* RootReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D662750831C0065F9D1 /* RootReducer.swift */; };
-		968F9D6F2750831C0065F9D1 /* state.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D692750831C0065F9D1 /* state.swift */; };
-		968F9D702750831C0065F9D1 /* reducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D6A2750831C0065F9D1 /* reducers.swift */; };
-		968F9D712750831C0065F9D1 /* actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D6B2750831C0065F9D1 /* actions.swift */; };
-		968F9D74275083400065F9D1 /* selectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D73275083400065F9D1 /* selectors.swift */; };
+		968F9D6C2750831C0065F9D1 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D642750831C0065F9D1 /* AppStore.swift */; };
+		968F9D6D2750831C0065F9D1 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D652750831C0065F9D1 /* AppState.swift */; };
+		968F9D6E2750831C0065F9D1 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F9D662750831C0065F9D1 /* AppReducer.swift */; };
 		96B1238E27696E360075DF2E /* GitHubApi+Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1238D27696E360075DF2E /* GitHubApi+Debug.swift */; };
 		96B123A5276974A90075DF2E /* RepositoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B123A3276974A90075DF2E /* RepositoryItem.swift */; };
 		96B123A6276974A90075DF2E /* SearchRepositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B123A4276974A90075DF2E /* SearchRepositoryView.swift */; };
@@ -39,19 +33,18 @@
 		9B79CAAC27957798006EE615 /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 9B79CAAB27957798006EE615 /* Logging */; };
 		9B79CAAF2795782D006EE615 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9B79CAAE2795782D006EE615 /* Alamofire */; };
 		9B79CAB227957869006EE615 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9B79CAB127957869006EE615 /* AlamofireImage */; };
-		9B79CAB52795789C006EE615 /* ReMVVMCore in Frameworks */ = {isa = PBXBuildFile; productRef = 9B79CAB42795789C006EE615 /* ReMVVMCore */; };
-		9B79CAB72795789C006EE615 /* ReMVVMSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9B79CAB62795789C006EE615 /* ReMVVMSwiftUI */; };
-		9B79CABD2795791E006EE615 /* InAppSafariViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B79CAB92795791E006EE615 /* InAppSafariViewState.swift */; };
-		9B79CABE2795791E006EE615 /* InAppSafariViewSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B79CABA2795791E006EE615 /* InAppSafariViewSelectors.swift */; };
-		9B79CABF2795791E006EE615 /* InAppSafariViewReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B79CABB2795791E006EE615 /* InAppSafariViewReducer.swift */; };
-		9B79CAC02795791E006EE615 /* InAppSafariViewAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B79CABC2795791E006EE615 /* InAppSafariViewAction.swift */; };
-		9B79CAC227957D37006EE615 /* InAppSafariViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B79CAC127957D37006EE615 /* InAppSafariViewModel.swift */; };
+		9B79CABD2795791E006EE615 /* InAppWebStateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B79CAB92795791E006EE615 /* InAppWebStateState.swift */; };
+		9B79CABE2795791E006EE615 /* InAppWebStateSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B79CABA2795791E006EE615 /* InAppWebStateSelectors.swift */; };
+		9B79CABF2795791E006EE615 /* InAppWebStateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B79CABB2795791E006EE615 /* InAppWebStateReducer.swift */; };
+		9B79CAC02795791E006EE615 /* InAppWebStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B79CABC2795791E006EE615 /* InAppWebStateAction.swift */; };
+		9B79CAC227957D37006EE615 /* InAppWebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B79CAC127957D37006EE615 /* InAppWebViewModel.swift */; };
+		9BA5ED3C284C336B004B604B /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9BA5ED3B284C336B004B604B /* ReSwift */; };
 		9BDBD17C275355FA008DB20C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBD17B275355FA008DB20C /* API.swift */; };
 		9BDBD18527536FCE008DB20C /* GitHubApiParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBD18427536FCE008DB20C /* GitHubApiParams.swift */; };
 		9BDBD18727536FE7008DB20C /* SearchRepositoryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBD18627536FE7008DB20C /* SearchRepositoryResult.swift */; };
 		9BDBD1892753718D008DB20C /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBD1882753718D008DB20C /* Repository.swift */; };
 		9BDBD18C27537A76008DB20C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BDBD18B27537A76008DB20C /* Preview Assets.xcassets */; };
-		9BED4B3F27A409EE003710EC /* InAppSafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED4B3E27A409EE003710EC /* InAppSafariView.swift */; };
+		9BED4B3F27A409EE003710EC /* InAppWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED4B3E27A409EE003710EC /* InAppWebView.swift */; };
 		9BED4B4227A42058003710EC /* ToastState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED4B4127A42058003710EC /* ToastState.swift */; };
 		9BED4B4427A42146003710EC /* ToastAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED4B4327A42146003710EC /* ToastAction.swift */; };
 		9BED4B4627A421AD003710EC /* ToastReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED4B4527A421AD003710EC /* ToastReducer.swift */; };
@@ -60,7 +53,7 @@
 		9BED4B4E27A42721003710EC /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED4B4D27A42721003710EC /* Toast.swift */; };
 		9BED4B5027A42730003710EC /* ToastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED4B4F27A42730003710EC /* ToastViewModel.swift */; };
 		9BED4B6027A508AD003710EC /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED4B5F27A508AD003710EC /* Toast.swift */; };
-		9BED4B6227A54895003710EC /* InAppSafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED4B6127A54895003710EC /* InAppSafariView.swift */; };
+		9BED4B6227A54895003710EC /* InAppWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED4B6127A54895003710EC /* InAppWebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,15 +82,9 @@
 		96728856274DF79300454CC0 /* FindGitHubRepUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindGitHubRepUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9672885A274DF79300454CC0 /* FindGitHubRepUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindGitHubRepUITests.swift; sourceTree = "<group>"; };
 		9672885C274DF79300454CC0 /* FindGitHubRepUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindGitHubRepUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		968F9D4C275076200065F9D1 /* CounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewModel.swift; sourceTree = "<group>"; };
-		968F9D4E275076C40065F9D1 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
-		968F9D642750831C0065F9D1 /* InitializeRedux.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitializeRedux.swift; sourceTree = "<group>"; };
-		968F9D652750831C0065F9D1 /* RootState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootState.swift; sourceTree = "<group>"; };
-		968F9D662750831C0065F9D1 /* RootReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootReducer.swift; sourceTree = "<group>"; };
-		968F9D692750831C0065F9D1 /* state.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = state.swift; sourceTree = "<group>"; };
-		968F9D6A2750831C0065F9D1 /* reducers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = reducers.swift; sourceTree = "<group>"; };
-		968F9D6B2750831C0065F9D1 /* actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = actions.swift; sourceTree = "<group>"; };
-		968F9D73275083400065F9D1 /* selectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectors.swift; sourceTree = "<group>"; };
+		968F9D642750831C0065F9D1 /* AppStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
+		968F9D652750831C0065F9D1 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		968F9D662750831C0065F9D1 /* AppReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		96B1238D27696E360075DF2E /* GitHubApi+Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GitHubApi+Debug.swift"; sourceTree = "<group>"; };
 		96B123A3276974A90075DF2E /* RepositoryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryItem.swift; sourceTree = "<group>"; };
 		96B123A4276974A90075DF2E /* SearchRepositoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRepositoryView.swift; sourceTree = "<group>"; };
@@ -111,17 +98,17 @@
 		9B31446527EEEE7C0069E460 /* Readme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Readme.swift; sourceTree = "<group>"; };
 		9B31446D27EF00830069E460 /* RequestStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestStatus.swift; sourceTree = "<group>"; };
 		9B31446F27EFDEBA0069E460 /* NavigationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationService.swift; sourceTree = "<group>"; };
-		9B79CAB92795791E006EE615 /* InAppSafariViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppSafariViewState.swift; sourceTree = "<group>"; };
-		9B79CABA2795791E006EE615 /* InAppSafariViewSelectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppSafariViewSelectors.swift; sourceTree = "<group>"; };
-		9B79CABB2795791E006EE615 /* InAppSafariViewReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppSafariViewReducer.swift; sourceTree = "<group>"; };
-		9B79CABC2795791E006EE615 /* InAppSafariViewAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppSafariViewAction.swift; sourceTree = "<group>"; };
-		9B79CAC127957D37006EE615 /* InAppSafariViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppSafariViewModel.swift; sourceTree = "<group>"; };
+		9B79CAB92795791E006EE615 /* InAppWebStateState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppWebStateState.swift; sourceTree = "<group>"; };
+		9B79CABA2795791E006EE615 /* InAppWebStateSelectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppWebStateSelectors.swift; sourceTree = "<group>"; };
+		9B79CABB2795791E006EE615 /* InAppWebStateReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppWebStateReducer.swift; sourceTree = "<group>"; };
+		9B79CABC2795791E006EE615 /* InAppWebStateAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppWebStateAction.swift; sourceTree = "<group>"; };
+		9B79CAC127957D37006EE615 /* InAppWebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppWebViewModel.swift; sourceTree = "<group>"; };
 		9BDBD17B275355FA008DB20C /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		9BDBD18427536FCE008DB20C /* GitHubApiParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubApiParams.swift; sourceTree = "<group>"; };
 		9BDBD18627536FE7008DB20C /* SearchRepositoryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoryResult.swift; sourceTree = "<group>"; };
 		9BDBD1882753718D008DB20C /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		9BDBD18B27537A76008DB20C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		9BED4B3E27A409EE003710EC /* InAppSafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppSafariView.swift; sourceTree = "<group>"; };
+		9BED4B3E27A409EE003710EC /* InAppWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppWebView.swift; sourceTree = "<group>"; };
 		9BED4B4127A42058003710EC /* ToastState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastState.swift; sourceTree = "<group>"; };
 		9BED4B4327A42146003710EC /* ToastAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastAction.swift; sourceTree = "<group>"; };
 		9BED4B4527A421AD003710EC /* ToastReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastReducer.swift; sourceTree = "<group>"; };
@@ -129,7 +116,7 @@
 		9BED4B4D27A42721003710EC /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		9BED4B4F27A42730003710EC /* ToastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewModel.swift; sourceTree = "<group>"; };
 		9BED4B5F27A508AD003710EC /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
-		9BED4B6127A54895003710EC /* InAppSafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppSafariView.swift; sourceTree = "<group>"; };
+		9BED4B6127A54895003710EC /* InAppWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppWebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,9 +124,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B79CAB52795789C006EE615 /* ReMVVMCore in Frameworks */,
-				9B79CAB72795789C006EE615 /* ReMVVMSwiftUI in Frameworks */,
 				9B79CAAC27957798006EE615 /* Logging in Frameworks */,
+				9BA5ED3C284C336B004B604B /* ReSwift in Frameworks */,
 				9B31446927EEEFC70069E460 /* MarkdownUI in Frameworks */,
 				96B2C9CE2769A9530073DB41 /* BetterSafariView in Frameworks */,
 				9B79CAAF2795782D006EE615 /* Alamofire in Frameworks */,
@@ -260,9 +246,8 @@
 				9B31446027EEC2E10069E460 /* RootView */,
 				9B31444E27EEAB650069E460 /* DetailView */,
 				9BED4B4C27A42715003710EC /* ToastView */,
-				9BED4B3D27A409E4003710EC /* InAppSafariView */,
+				9BED4B3D27A409E4003710EC /* InAppWebView */,
 				96B123A2276974A90075DF2E /* SearchRepositoryListView */,
-				968F9D4E275076C40065F9D1 /* CounterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -270,9 +255,8 @@
 		968F9D33275074CD0065F9D1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				968F9D4C275076200065F9D1 /* CounterViewModel.swift */,
 				96BA1DFA275DE3EE006E3678 /* SearchRepositoryViewModel.swift */,
-				9B79CAC127957D37006EE615 /* InAppSafariViewModel.swift */,
+				9B79CAC127957D37006EE615 /* InAppWebViewModel.swift */,
 				9BED4B4F27A42730003710EC /* ToastViewModel.swift */,
 				9B31446327EEE5A30069E460 /* DetailViewModal.swift */,
 			);
@@ -282,9 +266,9 @@
 		968F9D632750831C0065F9D1 /* Redux */ = {
 			isa = PBXGroup;
 			children = (
-				968F9D642750831C0065F9D1 /* InitializeRedux.swift */,
-				968F9D652750831C0065F9D1 /* RootState.swift */,
-				968F9D662750831C0065F9D1 /* RootReducer.swift */,
+				968F9D642750831C0065F9D1 /* AppStore.swift */,
+				968F9D652750831C0065F9D1 /* AppState.swift */,
+				968F9D662750831C0065F9D1 /* AppReducer.swift */,
 				968F9D672750831C0065F9D1 /* Modules */,
 			);
 			path = Redux;
@@ -294,21 +278,9 @@
 			isa = PBXGroup;
 			children = (
 				9BED4B4027A42049003710EC /* Toast */,
-				9B79CAB82795791E006EE615 /* InAppSafariView */,
-				968F9D682750831C0065F9D1 /* Counter */,
+				9B79CAB82795791E006EE615 /* InAppWebState */,
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		968F9D682750831C0065F9D1 /* Counter */ = {
-			isa = PBXGroup;
-			children = (
-				968F9D692750831C0065F9D1 /* state.swift */,
-				968F9D6A2750831C0065F9D1 /* reducers.swift */,
-				968F9D6B2750831C0065F9D1 /* actions.swift */,
-				968F9D73275083400065F9D1 /* selectors.swift */,
-			);
-			path = Counter;
 			sourceTree = "<group>";
 		};
 		96B123A2276974A90075DF2E /* SearchRepositoryListView */ = {
@@ -344,16 +316,16 @@
 			path = RootView;
 			sourceTree = "<group>";
 		};
-		9B79CAB82795791E006EE615 /* InAppSafariView */ = {
+		9B79CAB82795791E006EE615 /* InAppWebState */ = {
 			isa = PBXGroup;
 			children = (
-				9B79CAB92795791E006EE615 /* InAppSafariViewState.swift */,
-				9B79CABA2795791E006EE615 /* InAppSafariViewSelectors.swift */,
-				9B79CABB2795791E006EE615 /* InAppSafariViewReducer.swift */,
-				9B79CABC2795791E006EE615 /* InAppSafariViewAction.swift */,
+				9B79CAB92795791E006EE615 /* InAppWebStateState.swift */,
+				9B79CABC2795791E006EE615 /* InAppWebStateAction.swift */,
+				9B79CABB2795791E006EE615 /* InAppWebStateReducer.swift */,
+				9B79CABA2795791E006EE615 /* InAppWebStateSelectors.swift */,
 			);
-			name = InAppSafariView;
-			path = FindGitHubRep/redux/modules/InAppSafariView;
+			name = InAppWebState;
+			path = FindGitHubRep/redux/modules/InAppWebState;
 			sourceTree = SOURCE_ROOT;
 		};
 		9BDBD18327536FCE008DB20C /* GitHub */ = {
@@ -377,12 +349,12 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		9BED4B3D27A409E4003710EC /* InAppSafariView */ = {
+		9BED4B3D27A409E4003710EC /* InAppWebView */ = {
 			isa = PBXGroup;
 			children = (
-				9BED4B3E27A409EE003710EC /* InAppSafariView.swift */,
+				9BED4B3E27A409EE003710EC /* InAppWebView.swift */,
 			);
-			path = InAppSafariView;
+			path = InAppWebView;
 			sourceTree = "<group>";
 		};
 		9BED4B4027A42049003710EC /* Toast */ = {
@@ -409,7 +381,7 @@
 			isa = PBXGroup;
 			children = (
 				9BED4B5F27A508AD003710EC /* Toast.swift */,
-				9BED4B6127A54895003710EC /* InAppSafariView.swift */,
+				9BED4B6127A54895003710EC /* InAppWebView.swift */,
 			);
 			path = redux;
 			sourceTree = "<group>";
@@ -436,10 +408,9 @@
 				9B79CAAB27957798006EE615 /* Logging */,
 				9B79CAAE2795782D006EE615 /* Alamofire */,
 				9B79CAB127957869006EE615 /* AlamofireImage */,
-				9B79CAB42795789C006EE615 /* ReMVVMCore */,
-				9B79CAB62795789C006EE615 /* ReMVVMSwiftUI */,
 				9BED4B4A27A426DC003710EC /* ToastUI */,
 				9B31446827EEEFC70069E460 /* MarkdownUI */,
+				9BA5ED3B284C336B004B604B /* ReSwift */,
 			);
 			productName = FindGitHubRep;
 			productReference = 9672883C274DF79000454CC0 /* FindGitHubRep.app */;
@@ -518,9 +489,9 @@
 				9B79CAAA27957798006EE615 /* XCRemoteSwiftPackageReference "swift-log" */,
 				9B79CAAD2795782D006EE615 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				9B79CAB027957869006EE615 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
-				9B79CAB32795789C006EE615 /* XCRemoteSwiftPackageReference "ReMVVM" */,
 				9BED4B4927A426DC003710EC /* XCRemoteSwiftPackageReference "ToastUI" */,
 				9B31446727EEEFC70069E460 /* XCRemoteSwiftPackageReference "MarkdownUI" */,
+				9BA5ED3A284C336B004B604B /* XCRemoteSwiftPackageReference "ReSwift" */,
 			);
 			productRefGroup = 9672883D274DF79000454CC0 /* Products */;
 			projectDirPath = "";
@@ -590,40 +561,34 @@
 				9BDBD17C275355FA008DB20C /* API.swift in Sources */,
 				9B31447027EFDEBA0069E460 /* NavigationService.swift in Sources */,
 				96B123AD2769849A0075DF2E /* RemoteImageView.swift in Sources */,
-				968F9D4D275076200065F9D1 /* CounterViewModel.swift in Sources */,
-				9B79CAC02795791E006EE615 /* InAppSafariViewAction.swift in Sources */,
-				9B79CABF2795791E006EE615 /* InAppSafariViewReducer.swift in Sources */,
+				9B79CAC02795791E006EE615 /* InAppWebStateAction.swift in Sources */,
+				9B79CABF2795791E006EE615 /* InAppWebStateReducer.swift in Sources */,
 				96BA1DFB275DE3EE006E3678 /* SearchRepositoryViewModel.swift in Sources */,
-				968F9D712750831C0065F9D1 /* actions.swift in Sources */,
 				9BED4B4827A425A0003710EC /* ToastSelectors.swift in Sources */,
 				9BED4B4427A42146003710EC /* ToastAction.swift in Sources */,
 				96B123A6276974A90075DF2E /* SearchRepositoryView.swift in Sources */,
-				968F9D6D2750831C0065F9D1 /* RootState.swift in Sources */,
-				968F9D74275083400065F9D1 /* selectors.swift in Sources */,
+				968F9D6D2750831C0065F9D1 /* AppState.swift in Sources */,
 				9BDBD1892753718D008DB20C /* Repository.swift in Sources */,
 				9BDBD18527536FCE008DB20C /* GitHubApiParams.swift in Sources */,
-				9B79CABD2795791E006EE615 /* InAppSafariViewState.swift in Sources */,
+				9B79CABD2795791E006EE615 /* InAppWebStateState.swift in Sources */,
 				96728840274DF79000454CC0 /* FindGitHubRepApp.swift in Sources */,
 				9B31446227EEC2F90069E460 /* RootView.swift in Sources */,
-				968F9D4F275076C40065F9D1 /* CounterView.swift in Sources */,
 				9B31446627EEEE7C0069E460 /* Readme.swift in Sources */,
 				96B123A5276974A90075DF2E /* RepositoryItem.swift in Sources */,
 				9BED4B5027A42730003710EC /* ToastViewModel.swift in Sources */,
 				9B31446427EEE5A30069E460 /* DetailViewModal.swift in Sources */,
 				9BED4B4227A42058003710EC /* ToastState.swift in Sources */,
 				9B31445027EEAB870069E460 /* DetailView.swift in Sources */,
-				968F9D702750831C0065F9D1 /* reducers.swift in Sources */,
 				9BDBD18727536FE7008DB20C /* SearchRepositoryResult.swift in Sources */,
-				968F9D6C2750831C0065F9D1 /* InitializeRedux.swift in Sources */,
+				968F9D6C2750831C0065F9D1 /* AppStore.swift in Sources */,
 				96B1238E27696E360075DF2E /* GitHubApi+Debug.swift in Sources */,
-				968F9D6E2750831C0065F9D1 /* RootReducer.swift in Sources */,
+				968F9D6E2750831C0065F9D1 /* AppReducer.swift in Sources */,
 				9BED4B4E27A42721003710EC /* Toast.swift in Sources */,
-				968F9D6F2750831C0065F9D1 /* state.swift in Sources */,
-				9B79CABE2795791E006EE615 /* InAppSafariViewSelectors.swift in Sources */,
+				9B79CABE2795791E006EE615 /* InAppWebStateSelectors.swift in Sources */,
 				9B31446E27EF00830069E460 /* RequestStatus.swift in Sources */,
 				96B123AB2769777C0075DF2E /* User.swift in Sources */,
-				9B79CAC227957D37006EE615 /* InAppSafariViewModel.swift in Sources */,
-				9BED4B3F27A409EE003710EC /* InAppSafariView.swift in Sources */,
+				9B79CAC227957D37006EE615 /* InAppWebViewModel.swift in Sources */,
+				9BED4B3F27A409EE003710EC /* InAppWebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,7 +598,7 @@
 			files = (
 				96728851274DF79300454CC0 /* FindGitHubRepTests.swift in Sources */,
 				9BED4B6027A508AD003710EC /* Toast.swift in Sources */,
-				9BED4B6227A54895003710EC /* InAppSafariView.swift in Sources */,
+				9BED4B6227A54895003710EC /* InAppWebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1018,12 +983,12 @@
 				minimumVersion = 4.2.0;
 			};
 		};
-		9B79CAB32795789C006EE615 /* XCRemoteSwiftPackageReference "ReMVVM" */ = {
+		9BA5ED3A284C336B004B604B /* XCRemoteSwiftPackageReference "ReSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReMVVM/ReMVVM";
+			repositoryURL = "https://github.com/ReSwift/ReSwift";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
+				branch = master;
+				kind = branch;
 			};
 		};
 		9BED4B4927A426DC003710EC /* XCRemoteSwiftPackageReference "ToastUI" */ = {
@@ -1062,15 +1027,10 @@
 			package = 9B79CAB027957869006EE615 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
 			productName = AlamofireImage;
 		};
-		9B79CAB42795789C006EE615 /* ReMVVMCore */ = {
+		9BA5ED3B284C336B004B604B /* ReSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9B79CAB32795789C006EE615 /* XCRemoteSwiftPackageReference "ReMVVM" */;
-			productName = ReMVVMCore;
-		};
-		9B79CAB62795789C006EE615 /* ReMVVMSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9B79CAB32795789C006EE615 /* XCRemoteSwiftPackageReference "ReMVVM" */;
-			productName = ReMVVMSwiftUI;
+			package = 9BA5ED3A284C336B004B604B /* XCRemoteSwiftPackageReference "ReSwift" */;
+			productName = ReSwift;
 		};
 		9BED4B4A27A426DC003710EC /* ToastUI */ = {
 			isa = XCSwiftPackageProductDependency;

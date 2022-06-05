@@ -6,20 +6,20 @@
 //
 
 import SwiftUI
-import ReMVVMSwiftUI
+import ReSwift
 import ToastUI
 
 /// Toast を表示する
 /// root あたりに設定する
 struct Toast: View {
 
-    @ReMVVM.ViewModel private var viewModel: ToastViewModel!
+    @ObservedObject private var viewModel = ToastViewModel()
 
     var body: some View {
         ZStack {
         }.toast(item: $viewModel.item,
                 dismissAfter: 2.0) {
-            viewModel.dequeueToast(id: viewModel.itemId)
+            viewModel.dequeueToast()
         } content: { item in
             VStack {
                 Spacer()
