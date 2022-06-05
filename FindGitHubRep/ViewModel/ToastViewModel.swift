@@ -6,33 +6,41 @@
 //
 
 import Foundation
-import ReMVVMSwiftUI
-import SwiftUI
+import ReSwift
 
-final class ToastViewModel: ObservableObject, Initializable {
+final class ToastViewModel: ObservableObject, StoreSubscriber {
 
-    // private(set) は不要。ただし、onDismiss で ToastViewModel#dissmiss を呼ぶ必要あり
+    typealias StoreSubscriberStateType = ToastItem?
+
     @Published var item: ToastItem?
+    private var itemId: Int?
 
-    @Published private(set) var itemId: Int = -1
+    init() {
+        appStore.subscribe(self) {
+            $0.select { selectToastItem(store: $0) }
+        }
+    }
 
-    @ReMVVM.State<RootState> private var state
-    @ReMVVM.Dispatcher private var dispatcher
+    deinit {
+        appStore.unsubscribe(self)
+    }
 
-    required init() {
-        $state.map(selectToastItem).assign(to: &$item)
-        $state.map(selectToastItemId).assign(to: &$itemId)
+    func newState(state: ToastItem?) {
+        self.item = state
+        self.itemId = state?.id
     }
 
     public func enqueueToast(message: String, type: ToastType?) {
-        dispatcher[ToastAction.enqueueToast(message: message, type: type)]()
+        appStore.dispatch(ToastActions.enqueueToast(message: message, type: type))
     }
 
-    public func dequeueToast(id: Int) {
-        dispatcher[ToastAction.dequeueToast(id: id)]()
+    public func dequeueToast() {
+        if let itemId = self.itemId {
+            appStore.dispatch(ToastActions.dequeueToast(id: itemId))
+        }
     }
 
     public func clear() {
-        dispatcher[ToastAction.clearToast]()
+        appStore.dispatch(ToastActions.clearToast)
     }
 }

@@ -64,12 +64,12 @@
     }
     },
     {
-    "identity" : "remvvm",
+    "identity" : "reswift",
     "kind" : "remoteSourceControl",
-    "location" : "https://github.com/ReMVVM/ReMVVM",
+    "location" : "https://github.com/ReSwift/ReSwift",
     "state" : {
-    "revision" : "06447046511361dec81c718ecea2427a61a65f4d",
-    "version" : "3.0.0"
+    "branch" : "master",
+    "revision" : "d240448910549947547feea887ee832f54841dd0"
     }
     },
     {

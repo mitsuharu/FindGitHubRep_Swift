@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import ReMVVMSwiftUI
 
 private protocol SearchRepositoryListViewComponentProps {
     var items: [Repository]! { get }
@@ -58,7 +57,7 @@ private struct Component: View, SearchRepositoryListViewComponentProps {
 
 struct SearchRepositoryListView: View {
 
-    @ReMVVM.ViewModel private var viewModel: SearchRepositoryViewModel!
+    @ObservedObject private var viewModel = SearchRepositoryViewModel()
     @ObservedObject private var navigationService = NavigationService()
 
     func onPress(_ repo: Repository) {

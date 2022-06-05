@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import ReMVVMSwiftUI
+import ReSwift
 import MarkdownUI
 
 private protocol DetailViewProps {
@@ -99,7 +99,7 @@ private struct Component: View, DetailViewComponentProps {
 struct DetailView: View, DetailViewProps, Sendable {
 
     let repository: Repository!
-    @ReMVVM.ViewModel private var viewModel: DetailViewModel!
+    @ObservedObject private var viewModel = DetailViewModel()
     @ObservedObject private var navigationService = NavigationService()
 
     func onPressWebView(_ url: String?) {

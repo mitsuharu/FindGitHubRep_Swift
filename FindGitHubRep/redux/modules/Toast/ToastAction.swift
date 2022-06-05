@@ -6,10 +6,10 @@
 //
 
 import Foundation
-import ReMVVMSwiftUI
+import ReSwift
 
-enum ToastAction: StoreAction {
-    case enqueueToast(message: String, type: ToastType?)
+enum ToastActions: Action {
+    case enqueueToast(message: String, type: ToastType? = ToastType.info)
     case dequeueToast(id: Int)
     case clearToast
 }

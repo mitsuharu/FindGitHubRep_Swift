@@ -6,14 +6,14 @@
 //
 
 import SwiftUI
-import ReMVVMSwiftUI
+import ReSwift
 import BetterSafariView
 
 /// InAppSafariView を表示する
 /// root あたりに設定する
-struct InAppSafariView: View {
+struct InAppWebView: View {
 
-    @ReMVVM.ViewModel private var viewModel: InAppSafariViewModel!
+    @ObservedObject private var viewModel = InAppWebViewModel()
 
     var body: some View {
         VStack {
@@ -34,8 +34,8 @@ struct InAppSafariView: View {
     }
 }
 
-struct InAppSafariView_Previews: PreviewProvider {
+struct InAppWebView_Previews: PreviewProvider {
     static var previews: some View {
-        InAppSafariView()
+        InAppWebView()
     }
 }
