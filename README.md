@@ -18,8 +18,7 @@ FindGitHubRep_Swift
 
 - SwiftUI
   - 宣言型UI 	が好きだから
-  - iOS 15 から使い物になった印象
-- [ReMVVM](https://github.com/ReMVVM/ReMVVM)
+- ReSwift + MVVM
   - Redux が好きだから 
   - Redux + MVVM
 
@@ -28,4 +27,4 @@ FindGitHubRep_Swift
 
 - SwiftLint
 	- `% brew install swiftlint`
-	- ビルド時に変更ファイルに自動適用（on save 時にやりたい）
+	- ビルド時に変更ファイルに自動適用
