@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import ReSwift
 
 enum ToastType {
     case info

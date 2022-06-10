@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import ReSwift
 import ToastUI
 
 /// Toast を表示する
