@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import ReSwift
 
 struct AppState {
     let toast: ToastState

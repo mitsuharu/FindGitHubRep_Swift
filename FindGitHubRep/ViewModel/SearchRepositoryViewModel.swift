@@ -32,6 +32,14 @@ final class SearchRepositoryViewModel: ObservableObject, Sendable {
             if self.requestStatus == .loading {
                 return
             }
+            await MainActor.run {
+                self.keyword = keyword
+                self.page = 1
+                self.items = []
+                self.total = 0
+                self.hasNext = true
+                self.requestStatus = .loading
+            }
             await self.fetch(keyword: keyword, page: 1)
         }
     }
@@ -50,6 +58,7 @@ final class SearchRepositoryViewModel: ObservableObject, Sendable {
     }
 
     public func fetch(keyword: String, page: Int) async {
+        logger.info("SearchListViewModel#fetch keyword:\(keyword), page:\(page)")
         do {
             await MainActor.run {
                 self.requestStatus = .loading
@@ -57,7 +66,7 @@ final class SearchRepositoryViewModel: ObservableObject, Sendable {
             // 未認証なので、リクエスト発火を抑える
             await api.delay(sec: 0.5)
             let result = try await api.searchRepositories(keyword: keyword, page: page)
-
+            logger.info("SearchListViewModel#fetch result done")
             await MainActor.run {
                 self.keyword = keyword
                 self.page = page

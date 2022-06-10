@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import ReSwift
 
 func toastReducer(action: ToastActions, state: ToastState) -> ToastState {
 
